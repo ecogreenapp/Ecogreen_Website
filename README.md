@@ -1,20 +1,20 @@
-# Flask Web App - Nama Proyek
+# Flask Web App - EcoGreen
 
-Deskripsi singkat atau tagline proyek Anda.
+Economic Empowerment through Green Innovation
 
 ## Deskripsi
 
-**Nama Proyek** adalah aplikasi web berbasis Flask yang dirancang untuk [jelaskan tujuan atau fungsi utama proyek].
+EcoGreen adalah aplikasi web berbasis Flask yang dirancang untuk menjadi pusat informasi dan interaksi berkelanjutan bagi pengguna. Dengan teknologi deteksi sampah pintar, website ini memberikan pengalaman yang informatif dan interaktif, memungkinkan pengguna untuk menjelajahi berbagai fitur, termasuk informasi real-time tentang bank sampah lokal, edukasi peluang ekonomi, dan layanan chatbot yang ramah. Dengan fokus pada pelestarian lingkungan dan pemberdayaan masyarakat, website Ecogreen menjadi platform online yang menggabungkan teknologi dan kesadaran lingkungan, menciptakan komunitas daring yang aktif dan berkomitmen untuk mencapai tujuan keberlanjutan.
 
 Fitur utama termasuk:
-- [Fitur 1]
-- [Fitur 2]
-- [Fitur 3]
+- TrashTech
+- GreenBot
+- Sentimen Analisis
 
 ## Tata Cara Instalasi
 
 1. **Clone Repositori:** <br>
-    git clone https://github.com/username/nama-proyek.git
+    git clone https://github.com/ecogreenapp/Ecogreen_Website.git
 
 2. **Pindah ke Direktori Proyek:** <br>
     cd nama-proyek
