@@ -13,10 +13,10 @@ Fitur utama termasuk:
 
 ## Tata Cara Instalasi
 
-1. **Clone Repositori:**
+1. **Clone Repositori:** <br>
     git clone https://github.com/username/nama-proyek.git
 
-2. **Pindah ke Direktori Proyek:**
+2. **Pindah ke Direktori Proyek:** <br>
     cd nama-proyek
 
 3. **Lingkungan Virtual (Opsional, tapi Direkomendasikan):**
@@ -25,15 +25,15 @@ Fitur utama termasuk:
     atau <br>
     .\venv\Scripts\activate  # untuk Windows <br>
 
-4. **Install Dependensi:**
+4. **Install Dependensi:** <br>
     pip install -r requirements.txt
 
 5. **Konfigurasi Variabel Lingkungan:**
     - Duplikat file `.env.example` menjadi `.env`.
     - Sesuaikan nilai variabel lingkungan jika diperlukan.
 
-6. **Jalankan Aplikasi:**
-    python app.py
+6. **Jalankan Aplikasi:** <br>
+    python app.py <br>
     Aplikasi akan berjalan di http://localhost:5000/ (atau port lain yang telah diatur).
 
 7. **Buka Aplikasi di Browser:**
