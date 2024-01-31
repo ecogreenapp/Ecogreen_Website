@@ -4,7 +4,7 @@ Economic Empowerment through Green Innovation
 
 ## Deskripsi
 
-EcoGreen adalah aplikasi web berbasis Flask yang dirancang untuk menjadi pusat informasi dan interaksi berkelanjutan bagi pengguna. Dengan teknologi deteksi sampah pintar, website ini memberikan pengalaman yang informatif dan interaktif, memungkinkan pengguna untuk menjelajahi berbagai fitur, termasuk informasi real-time tentang bank sampah lokal, edukasi peluang ekonomi, dan layanan chatbot yang ramah. Dengan fokus pada pelestarian lingkungan dan pemberdayaan masyarakat, website Ecogreen menjadi platform online yang menggabungkan teknologi dan kesadaran lingkungan, menciptakan komunitas daring yang aktif dan berkomitmen untuk mencapai tujuan keberlanjutan.
+EcoGreen pada versi website berbasis Flask ini dirancang untuk menjadi pusat informasi dan interaksi berkelanjutan bagi pengguna. Dengan teknologi deteksi sampah pintar, website ini memberikan pengalaman yang informatif dan interaktif, memungkinkan pengguna untuk menjelajahi berbagai fitur, termasuk informasi real-time tentang bank sampah lokal, edukasi peluang ekonomi, dan layanan chatbot yang ramah. Dengan fokus pada pelestarian lingkungan dan pemberdayaan masyarakat, website Ecogreen menjadi platform online yang menggabungkan teknologi dan kesadaran lingkungan, menciptakan komunitas daring yang aktif dan berkomitmen untuk mencapai tujuan keberlanjutan.
 
 Fitur utama termasuk:
 - TrashTech
