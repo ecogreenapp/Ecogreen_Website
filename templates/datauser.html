@@ -1,0 +1,153 @@
+{% extends 'base.html'%} {%block content%}
+<section>
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <div class="container-fluid py-6">
+      <div class="row">
+        <div class="col-12">
+          <div class="card mb-4 bg-white" style="margin-top: 50px;">
+            <div class="card-header pb-0">
+              <h6>Daftar User
+                <button type="button" class="btn btn-success float-end" style="margin-bottom: 1%;" data-toggle="modal"
+                  data-target="#mymodal"><i class="ti ti-plus"></i>USER</button>
+                </h>
+            </div>
+            {%with messages = get_flashed_messages()%}
+            {%if messages%}
+            {% for message in messages %}
+            <div class="alert alert-success alert-dismissable" role="alert">
+              {{message}}<button type="button" class="btn-close float-end" data-dismiss="alert" aria-label="close">
+              </button>
+            </div>
+            {%endfor%}
+            {%endif%}
+            {%endwith%}
+            <div class="card-body px-0 pt-0 pb-2">
+              <div class="table-responsive p-0">
+                <table class="table align-items-center mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nama</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Email</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                        Password</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Foto
+                        Profil
+                      </th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Role
+                      </th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for user in users %}
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">{{ user.nama }}</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">{{ user.email
+                          }}</p>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold">{{
+                          user.password }}</span>
+                      </td>
+                      <td>
+                        {% if user.foto_profil %}
+                        <img src="{{ url_for('static', filename=user.foto_profil.replace('\\', '/')) }}"
+                          alt="Artikel Image" class="img-fluid" style="max-width: 100px; max-height: 100px;">
+                        {% else %}
+                        <span>Tidak Ada Foto Profil</span>
+                        {% endif %}
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="badge badge-sm bg-gradient-success"
+                          style="color: black;background-color: aquamarine;">{{
+                          user.role }}</span>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <a href="{{ url_for('edituser', user_id=user.user_id) }}" class="btn btn-warning btn xs"
+                          style="margin-bottom: 3px;">
+                          <span><i class="ti ti-pencil"></i></span></a>
+                        <a href="{{ url_for('deleteuser', user_id=user.user_id) }}" class="btn btn-danger btn-xs"
+                          onclick="return confirm ('Apakah kamu yakin akan menghapusnya?')">
+                          <span><i class="ti ti-trash"></i></span></a>
+                      </td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="mymodal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-primary" style="align-content: center;">Tambah Data User</h5>
+          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="/datauser" method="post" enctype="multipart/form-data">
+            <div id=" error-message" class="alert alert-danger" style="display: none;">
+              Mohon lengkapi semua kolom.
+            </div>
+            <div class="form-group">
+              <label>Nama:</label>
+              <input type="text" class="form-control" name="nama" required="1">
+            </div>
+            <div class="form-group">
+              <label>Email:</label>
+              <input type="email" class="form-control" name="email" required="1">
+            </div>
+            <div class="form-group">
+              <label>Password:</label>
+              <input type="text" class="form-control" name="password" required="1">
+            </div>
+            <div class="form-group">
+              <label>Role:</label>
+              <select class="form-control" name="role" required="1">
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>foto profil</label>
+              <input name="foto_profil" type="file" accept="image/*" class="form-control" id="foto_profil"
+                placeholder="Masukkan foto profil">
+              <div class="form-group">
+                <button class="btn btn-primary" type="submit">Tambah </button>
+              </div>
+          </form>
+          <script>
+            function validateForm() {
+              var nama = document.getElementById('nama').value;
+              var email = document.getElementById('email').value;
+              var password = document.getElementById('password').value;
+              var role = document.getElementById('role').value;
+
+              if (nama === '' || email === '' || password === '' || role === '') {
+                document.getElementById('error-message').style.display = 'block';
+                return false;
+              }
+
+              return true;
+            }
+          </script>
+        </div>
+      </div>
+    </div>
+
+</section>
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends 'base.html'%}
+{% block content %}
+<section>
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
+        <div class="container-fluid py-6">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mb-4 bg-white" style="margin-top: 50px;">
+                        <div class="card-header pb-0">
+                            <h6>Edit Artikel</h6>
+                        </div>
+                        {%with messages = get_flashed_messages()%}
+                        {%if messages%}
+                        {% for message in messages %}
+                        <div class="alert alert-success alert-dismissable" role="alert">
+                            {{message}}<button type="button" class="btn-close float-end" data-dismiss="alert"
+                                aria-label="close">
+                            </button>
+                        </div>
+                        {%endfor%}
+                        {%endif%}
+                        {%endwith%}
+                        <div class="card-body px-0 pt-0 pb-2">
+                            <div class="table-responsive p-0">
+                                <form action="/editartikel/{{ data_artikel.id }}" method="POST"
+                                    enctype="multipart/form-data">
+                                    <div class="form-group">
+                                        <label for="judul">judul</label>
+                                        <input type="text" name="judul" class="form-control" id="judul"
+                                            value="{{ data_artikel.judul }}" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Gambar</label>
+                                        <input name="gambar" type="file" accept="image/*" class="form-control"
+                                            id="gambar" placeholder="Masukkan gambar artikel">
+                                        {% if data_artikel.gambar %}
+                                        <img src="{{ url_for('static', filename=data_artikel.gambar.replace('\\', '/')) }}"
+                                            alt="Current Image" class="img-fluid"
+                                            style="max-width: 200px; margin-top: 10px;">
+                                        <input type="hidden" name="gambar_lama" value="{{ data_artikel.gambar }}">
+                                        {% endif %}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="isi_artikel">isi
+                                            artikel</label>
+                                        <textarea name="isi_artikel" class="form-control" id="isi_artikel"
+                                            required>{{ data_artikel.isi_artikel }}</textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="kategori">kategori</label>
+                                        <input type="text" name="kategori" class="form-control" id="kategori"
+                                            value="{{ data_artikel.kategori }}" required>
+                                    </div>
+                                    <div style="margin-top: 10px;">
+                                        <button type="submit" class="btn btn-primary">Simpan
+                                            Perubahan</button>
+                                        <a href="/datartikel"><button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Batal</button><a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</section>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'layout.html'%} {%block content%}
+<main id="main" style="background-color: white;">
+	<section>
+		<div class="breadcrumbs">
+			<nav>
+				<div class="container">
+					<ol>
+						<li>
+							<a href="index.html">Beranda</a>
+						</li>
+						<li>Trashtec</li>
+					</ol>
+				</div>
+			</nav>
+		</div>
+		<!-- End Breadcrumbs -->
+		<div class="container" style="margin-top: 1%;margin-bottom: 2%;">
+			<div class="content">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 order-md-2 text-center" style="padding-top: 1px;" data-aos="fade-up">
+							<img src="{{url_for('static', filename='assets/img/deteksi.png')}}" alt="deteksi Image"
+								class="img-fluid" width="500px">
+						</div>
+						<div class="col-md-6 contents" style="border: 1px solid #00B98E;">
+							<div class="row justify-content-center" style="margin-top: 10%;">
+								<div class="col-md-8">
+									<div class="mb-4">
+										<h2>Trashtec</h2>
+										<p class="mb-4">Fitur Deteksi Sampah</p>
+									</div>
+									<div class="upload-section">
+										<form id="upload-file" method="post" enctype="multipart/form-data">
+											<label for="imageUpload" class="btn btn-primary">pilih gambar</label>
+											<input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+										</form>
+									</div>
+									<div class="image-section">
+										<div class="img-preview">
+											<div id="imagePreview"></div>
+										</div>
+										<div>
+											<button type="button" class="btn btn-primary btn-lg "
+												id="btn-predict">Predict!</button>
+										</div>
+									</div>
+									<div class="loader" style="display:none;"></div>
+									<div class="result-section">
+										<h4>Hasil Deteksi</h4>
+										<p id="result">Kelas Sampah: -</p>
+									</div>
+									<div class="d-flex" style="padding-top: 30px;margin-bottom: 50px;">
+										<a href="/hargasampah" class="btn btn-primary"
+											style="border-radius: 20px; background-color: #00B98E; ">lihat harga</a>
+										<a href="/produk" class="btn btn-primary"
+											style="margin-left:7px ;border-radius: 20px; background-color: #00B98E;">lihat
+											produk</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+</main>
+
+{% endblock %}

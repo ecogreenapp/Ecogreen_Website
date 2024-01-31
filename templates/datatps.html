@@ -1,0 +1,153 @@
+{% extends 'base.html'%} {%block content%}
+<section>
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <div class="container-fluid py-6">
+      <div class="row">
+        <div class="col-12">
+          <div class="card mb-4 bg-white" style="margin-top: 50px;">
+            <div class="card-header pb-0">
+              <h6>Daftar TPS
+                <button type="button" class="btn btn-success float-end" style="margin-bottom: 1%;" data-toggle="modal"
+                  data-target="#mymodal"><i class="ti ti-plus"></i>TPS</button>
+                </h>
+            </div>
+            {%with messages = get_flashed_messages()%}
+            {%if messages%}
+            {% for message in messages %}
+            <div class="alert alert-success alert-dismissable" role="alert">
+              {{message}}<button type="button" class="btn-close float-end" data-dismiss="alert" aria-label="close">
+              </button>
+            </div>
+            {%endfor%}
+            {%endif%}
+            {%endwith%}
+            <div class="card-body px-0 pt-0 pb-2">
+              <div class="table-responsive p-0">
+                <table class="table align-items-center mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nama</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Alamat</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                        Kabupaten/Kota</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                        kecamatan</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Desa
+                      </th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for data_tps in data_tps %}
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm ">{{ data_tps.nama }}</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xxs font-weight-bold mb-0">{{ data_tps.alamat }}</p>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="mb-0 text-sm  font-weight-bold">{{ data_tps.kabupaten_kota }}</span>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="mb-0 text-sm ">{{ data_tps.kecamatan }}</span>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="mb-0 text-sm ">{{ data_tps.desa }}</span>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <a href="{{ url_for('edit_tps', id=data_tps.id) }}" class="btn btn-warning btn-xs"
+                          style="margin-bottom: 5px;">
+                          <span><i class="ti ti-pencil"></i></span>
+                        </a>
+                        <a href="{{ url_for('delete_tps', id=data_tps.id) }}" class="btn btn-danger btn-xs"
+                          onclick="return confirm('Apakah kamu yakin akan menghapusnya?')">
+                          <span><i class="ti ti-trash"></i></span>
+                        </a>
+                      </td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- START CREATE NEW DATA _tps -->
+          <div id="mymodal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title text-primary" style="align-content: center;">Tambah Data TPS</h5>
+                  <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form action="/datatps" method="POST" onsubmit="return validateForm() ">
+                    <div id="error-message" class="alert alert-danger" style="display: none;">
+                      Mohon lengkapi semua kolom.
+                    </div>
+                    <div class="form-group">
+                      <label>Nama:</label>
+                      <input type="text" name="nama" class="form-control" id="nama" placeholder="Masukkan nama tps">
+                    </div>
+
+                    <div class="form-group">
+                      <label>Alamat:</label>
+                      <input name="alamat" type="text" class="form-control" id="alamat"
+                        placeholder="Masukkan alamat tps">
+                    </div>
+
+                    <div class="form-group">
+                      <label>kabupaten / kota:</label>
+                      <input name="kabupaten_kota" type="text" class="form-control" id="kabupaten_kota"
+                        placeholder="Masukkan kabupaten / kota tps">
+                    </div>
+
+                    <div class="form-group">
+                      <label>Kecamatan:</label>
+                      <input name="kecamatan" type="text" class="form-control" id="kecamatan"
+                        placeholder="Masukkan kecamatan tps">
+                    </div>
+
+                    <div class="form-group">
+                      <label>Desa:</label>
+                      <input name="desa" type="text" class="form-control" id="desa" placeholder="Masukkan desa tps">
+                    </div>
+                    <div style="margin-top: 6px;">
+                      <button type="submit" class="btn btn-primary mb-2">Save</button>
+                    </div>
+                  </form>
+                  <!-- Script JavaScript untuk validasi formulir -->
+                  <script>
+                    function validateForm() {
+                      var nama = document.getElementById('nama').value;
+                      var alamat = document.getElementById('alamat').value;
+                      var kebupaten_kota = document.getElementById('kabupaten_kota').value;
+                      var kecamatan = document.getElementById('kecamatan').value;
+                      var desa = document.getElementById('desa').value;
+
+                      if (nama === '' || alamat === '' || kebupaten_kota === '' || kecamatan === ''
+                        || desa === '') {
+                        document.getElementById('error-message').style.display = 'block';
+                        return false;
+                      }
+
+                      return true;
+                    }
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</section>
+{% endblock %}

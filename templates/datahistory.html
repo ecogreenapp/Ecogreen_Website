@@ -1,0 +1,79 @@
+{% extends 'base.html'%} {%block content%}
+<section>
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <div class="container-fluid py-6">
+      <div class="row">
+        <div class="col-12">
+          <div class="card mb-4 bg-white" style="margin-top: 50px;">
+            <div class="card-header pb-0">
+              <h6>Data History Deteksi
+                </h>
+            </div>
+            {%with messages = get_flashed_messages()%}
+            {%if messages%}
+            {% for message in messages %}
+            <div class="alert alert-success alert-dismissable" role="alert">
+              {{message}}<button type="button" class="btn-close float-end" data-dismiss="alert" aria-label="close">
+              </button>
+            </div>
+            {%endfor%}
+            {%endif%}
+            {%endwith%}
+            <div class="card-body px-0 pt-0 pb-2">
+              <div class="table-responsive p-0">
+                <table class="table align-items-center mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                        tanggal</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">user
+                      </th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">gambar
+                      </th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">hasil
+                      </th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for history_deteksi, username in history_deteksi %}
+                    <tr>
+                      <td>
+
+                        <h6 class="align-middle text-center text-sm ">{{ history_deteksi.tanggal_deteksi }}</h6>
+
+                      </td>
+                      <td>
+                        <p class="align-middle text-center text-sm">{{ username }}</p>
+                      </td>
+                      <td style="text-align: center;">
+                        <img src="{{ url_for('static', filename=history_deteksi.file_path.replace('\\', '/')) }}"
+                          alt="history detection Image" class="img-fluid" width="100px">
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="mb-0 text-sm">{{ history_deteksi.hasil_deteksi }}</span>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <a href="{{ url_for('delete_history_deteksi', id=history_deteksi.id) }}"
+                          class="btn btn-danger btn-xs"
+                          onclick="return confirm('Apakah kamu yakin akan menghapusnya?')">
+                          <span><i class="ti ti-trash"></i></span>
+                        </a>
+                      </td>
+                    </tr>
+                    {% endfor %}
+
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+</section>
+{% endblock %}

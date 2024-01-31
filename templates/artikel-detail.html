@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+        <nav>
+            <div class="container">
+                <ol>
+                    <li><a href="{{ url_for('index') }}">Beranda</a></li>
+                    <li><a href="{{ url_for('artikel') }}">Artikel</a></li>
+                    <li>{{ article.judul }}</li>
+                </ol>
+            </div>
+        </nav>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog">
+        <div class="container">
+            <div class="blog-wrapper">
+                <!-- Center the title -->
+                <div class="col-md-12 text-center">
+                    <h1 style="font-size: 36px;">{{ article.judul }}</h1>
+                </div>
+
+                <div class="col-lg-8 blog-col mx-auto">
+                    <div class=" mt-55 wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.4s">
+                        <div class="blog-image text-center">
+                            <h1 style="font-size: 15px;">{{ article.kategori }}</h1>
+
+                            <img src="{{ url_for('static', filename=article.gambar.replace('\\', '/')) }}" alt=""
+                                style="width: 70%; max-width: 70%;">
+                            <h8>{{ article.tanggal.strftime('%A, %d/%m/%Y') }}</h8>
+                        </div>
+
+                        <div class="blog-content mt-4" style="text-align: justify; width: 100%; max-width: 100%;">
+                            <p>{{ article.isi_artikel }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</main><!-- End #main -->
+{% endblock %}

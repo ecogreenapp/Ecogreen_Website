@@ -1,0 +1,87 @@
+{% extends 'base.html'%} {%block content%}
+<section>
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <div class="container-fluid py-6">
+      <div class="row">
+        <div class="col-12">
+          <div class="card mb-4 bg-white" style="margin-top: 50px;">
+            <div class="card-header pb-0">
+              <h6>Data Sentimen Analasis
+                              <a href="http://localhost:8501/"  class="btn btn-primary" target="_blank" style="margin-left: 70%;" >Visualisasi</a>
+                </h6>
+            </div>
+            {%with messages = get_flashed_messages()%}
+            {%if messages%}
+            {% for message in messages %}
+            <div class="alert alert-success alert-dismissable" role="alert">
+              {{message}}<button type="button" class="btn-close float-end" data-dismiss="alert" aria-label="close">
+              </button>
+            </div>
+            {%endfor%}
+            {%endif%}
+            {%endwith%}
+            <div class="card-body px-0 pt-0 pb-2">
+              <div class="table-responsive p-0">
+                <table class="table align-items-center mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Id Review</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Nama</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Tanggal
+                      </th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                        Review</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                        Hasil</th> 
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for datasentimen in data_sentimen %}
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm ">{{ datasentimen.id_review }}</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xxs font-weight-bold mb-0">{{ datasentimen.nama }}</p>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="mb-0 text-sm  font-weight-bold">{{ datasentimen.tanggal }}</span>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="mb-0 text-sm ">{{ datasentimen.review }}</span>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                            {% if datasentimen.label == -1 %}
+                                <span class="mb-0 text-sm text-danger">Negatif</span>
+                            {% elif datasentimen.label == 0 %}
+                                <span class="mb-0 text-sm text-warning">Netral</span>
+                            {% elif datasentimen.label == 1 %}
+                                <span class="mb-0 text-sm text-success">Positif</span>
+                            {% else %}
+                                <span class="mb-0 text-sm">Tidak Valid</span>
+                            {% endif %}
+                        </td>
+                      <td class="align-middle text-center text-sm">
+                        <a href="{{ url_for('delete_sentimen', id=datasentimen.id_hasil_model) }}" class="btn btn-danger btn-xs" onclick="return confirm('Apakah kamu yakin akan menghapusnya?')">
+                            <span><i class="ti ti-trash"></i></span>
+                        </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</section>
+{% endblock %}

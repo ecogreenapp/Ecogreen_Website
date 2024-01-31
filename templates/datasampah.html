@@ -1,0 +1,154 @@
+{% extends 'base.html'%} {%block content%}
+<section>
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <div class="container-fluid py-6">
+      <div class="row">
+        <div class="col-12">
+          <div class="card mb-4 bg-white" style="margin-top: 50px;">
+            <div class="card-header pb-0">
+              <h6>Daftar Sampah
+                <button type="button" class="btn btn-success float-end" style="margin-bottom: 1%;" data-toggle="modal"
+                  data-target="#mymodaltambah"><i class="ti ti-plus"></i> sampah</button>
+                </h>
+            </div>
+            {%with messages = get_flashed_messages()%}
+            {%if messages%}
+            {% for message in messages %}
+            <div class="alert alert-success alert-dismissable" role="alert">
+              {{message}}<button type="button" class="btn-close float-end" data-dismiss="alert" aria-label="close">
+              </button>
+            </div>
+            {%endfor%}
+            {%endif%}
+            {%endwith%}
+            <div class="card-body px-0 pt-0 pb-2">
+              <div class="table-responsive p-0">
+                <table class="table align-items-center mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Kode</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Nama</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Jenis
+                      </th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Satuan
+                      </th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Harga
+                      </th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for sampah in sampah %}
+                    <tr>
+                      <td>
+                        <p class="text-xxs font-weight-bold mb-0">{{ sampah.kode
+                          }}</p>
+                      </td>
+                      <td>
+                        <p class="text-xxs font-weight-bold mb-0">{{ sampah.nama
+                          }}</p>
+                      </td>
+                      <td class="align-middle text-center">
+                        <p class="text-xxs font-weight-bold mb-0">{{ sampah.jenis
+                          }}</p>
+                      </td>
+                      <td class="align-middle text-center">
+                        <p class="text-xxs font-weight-bold mb-0">{{ sampah.satuan
+                          }}</p>
+                      </td>
+                      <td class="align-middle text-center">
+                        <p class="text-xxs font-weight-bold mb-0">{{ sampah.harga
+                          }}</p>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <a href="/editsampah/{{sampah.id}}" class="btn btn-warning btn-xs"
+                          onclick="openEditPopup({{ sampah.id }})">
+                          <span><i class="ti ti-pencil"></i></span>
+                        </a>
+                        <a href="/delete/{{sampah.id}}" class="btn btn-danger btn-xs"
+                          onclick="return confirm('Apakah kamu yakin akan menghapusnya?')">
+                          <span><i class="ti ti-trash"></i></span></a>
+                      </td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- START CREATE NEW DATA BANKSAMPAH -->
+        <div id="mymodaltambah" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-primary" style="align-content: center;">Tambah Data Sampah</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                </button>
+              </div>
+              <div class="modal-body">
+
+                <form action="/sampah" method="POST" onsubmit="return validateForm()">
+                  <div id="error-message" class="alert alert-danger" style="display: none;">
+                    Mohon lengkapi semua kolom.
+                  </div>
+                  <div class="form-group">
+                    <label>kode</label>
+                    <input type="text" name="kode" class="form-control" id="kode" placeholder="Masukkan kode sampah">
+                  </div>
+
+                  <div class="form-group">
+                    <label>nama</label>
+                    <input type="text" name="nama" class="form-control" id="nama" placeholder="Masukkan nama sampah">
+                  </div>
+
+                  <div class="form-group">
+                    <label>jenis</label>
+                    <input name="jenis" type="text" class="form-control" id="jenis" placeholder="Masukkan jenis sampah">
+                  </div>
+
+                  <div class="form-group">
+                    <label>Satuan</label>
+                    <input name="satuan" type="text" class="form-control" id="satuan" placeholder="Masukkan satuan">
+                  </div>
+
+                  <div class="form-group" style="margin-bottom: 1%;">
+                    <label>Harga</label>
+                    <input name="harga" type="number" class="form-control" id="harga"
+                      placeholder="Masukkan harga sampah">
+                  </div>
+
+                  <button type="submit" class="btn btn-primary mb-2">Save</button>
+
+                </form>
+                <!-- Script JavaScript untuk validasi formulir -->
+                <script>
+                  function validateForm() {
+                    var kode = document.getElementById('kode').value;
+                    var nama = document.getElementById('nama').value;
+                    var jenis = document.getElementById('jenis').value;
+                    var satuan = document.getElementById('satuan').value;
+                    var harga = document.getElementById('harga').value;
+
+                    if (kode === '' || nama === '' || jenis === '' || satuan === '' || harga === '') {
+                      document.getElementById('error-message').style.display = 'block';
+                      return false; // Menghentikan pengiriman formulir jika ada data yang kosong
+                    }
+
+                    return true; // Lanjutkan pengiriman formulir jika semua data sudah diisi
+                  }
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+
+</section>
+
+{% endblock %}

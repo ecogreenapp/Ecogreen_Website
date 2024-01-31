@@ -1,0 +1,100 @@
+{% extends 'layout.html'%} 
+{% block content %}
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+        <nav>
+            <div class="container">
+                <ol>
+                    <li><a href="/">Beranda</a></li>
+                    <li><a href="/banksampah">Bank Sampah</a></li>
+                    <li>Bank Sampah Mawar Biru</li>
+                </ol>
+            </div>
+        </nav>
+    </div>
+    <!-- End Breadcrumbs -->
+
+    <section id="about" class="about" style="background-color: white;">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <p>Bank Sampah<span> Mawar Biru</span></p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-7 position-relative about-img" style="background-image: url({{ url_for('static', filename='assets/img/fotomawar1.png') }}) ;" data-aos="fade-up" data-aos-delay="150">
+            <div class="call-us position-absolute">
+              <img src="{{url_for('static', filename ='assets/img/logomawarbiru.png')}}">
+            </div>
+          </div>
+          <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">
+            <div class="content ps-0 ps-lg-5">
+              <h4>
+                Visi:
+              </h4>
+              <ul>
+                <li><i class="bi bi-check2-all"></i> Mewujudkan masyarakat yang peduli lingkungan dan menjadi pelopor pengolahan sampah berbasis masyarakat</li>
+                </ul>
+              <h4>
+                Misi: 
+              </h4>
+              <ul>
+                <li><i class="bi bi-check2-all"></i> Memberikan edukasi sadar sampah dilingkungan sekolah dan masyarakat </li>
+                <li><i class="bi bi-check2-all"></i> Meningkatkan perekonomian anggota Bank Sampah Mawar Biru dengan Mengolah sampah menjadi produk yang bernilai ekonomis </li>
+                <li><i class="bi bi-check2-all"></i> Berbagi ilmu tentang pengolahan sampah menjadi produk yang bernilai ekonomis  </li>
+                <li><i class="bi bi-check2-all"></i> Mewujudkan prinsip cinta lingkungan </li>
+                <li><i class="bi bi-check2-all"></i> Bekerja sama secara aktif dengan pihak baik pemerintahan maupun masyarakat </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End About Section -->
+
+    <section id="bsmawar" class="bsmawar" style="background-color: white;">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>kontak</h2>
+        </div>
+
+        <!-- Start bsmawar Content -->
+        <div class="row">
+          <!-- Start bsmawar Menu -->
+          <div class="col-md-4">
+            <div class="bsmawar-menu">
+              <ul class="list-unstyled">
+                <li>
+                  <a href=""><i class="bi bi-telephone"></i> +62 123 4567</a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/mawarbirukraton?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="bi bi-instagram"></i>mawarbirukraton</a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/nurlaelatul.aqifah.1"><i class="bi bi-facebook"></i>Nurlaelatul Aqifah</a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/@nurlaelatulaqifah1285"><i class="bi bi-youtube"></i>Nurlaelatul Aqifah</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End bsmawar Menu -->
+
+          <!-- Start Google Maps -->
+          <div class="col-md-8">
+            <div class="bsmawar-maps">
+              <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63379.590214572105!2d109.0632847!3d-6.863691!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fb7c450836457%3A0xc40d62e2fedb7790!2sBank%20Sampah%20Mawar%20Biru!5e0!3m2!1sid!2sid!4v1705414875240!5m2!1sid!2sid" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+          <!-- End Google Maps -->
+        </div>
+        <!-- End bsmawar Content -->
+
+      </div>
+    </section>
+
+
+</main>
+{% endblock %}

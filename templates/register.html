@@ -1,0 +1,112 @@
+{% extends 'layout.html'%} 
+{% block content %}
+  <main id="main" style="background-color: white;">
+    <section>
+      <div class="container" style="margin-top: 10%; margin-bottom: 2%;">
+        <div class="content">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 order-md-2">
+                <img src="{{url_for('static', filename='assets/img/signup.png')}}" alt="Login Image" class="img-fluid">
+              </div>
+              <div class="col-md-6 contents">
+                <div class="row justify-content-center">
+                  <div class="col-md-8" >
+                    <div class="mb-4">
+                      <h3>Daftar <strong>EcoGreen</strong></h3>
+                      <p class="mb-4">Dapatkan pengalaman terbaik Anda untuk mengetahui EcoGreen lebih dalam</p>
+                    </div>
+                    <form id="register-form" method="post">
+                      <div class="alert alert-danger" id="alert-message" style="display:none;"></div>
+                      <div class="form-group first">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="nama" name="nama"
+                        placeholder="Masukan Nama" aria-label="Name" aria-describedby="nama-addon" />
+                      </div>
+                      <div class="form-group first">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email"
+                        placeholder=" Masukan Email" aria-label="Email" aria-describedby="email-addon"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Email harus menggunakan huruf kecil"/>
+                      </div>
+                      <div class="form-group last mb-4">
+                        <label for="password">Password</label>
+                        <div class="input-group">
+                          <input type="password" class="form-control" id="password" name="password" placeholder="Masukan Password" aria-label="Password" aria-describedby="password-addon" />
+                          <div class="input-group-append">
+                            <span class="input-group-text toggle-password" id="toggle-password">
+                              <i class="fa fa-eye" aria-hidden="true"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex mb-5 align-items-center">
+                        <label class="control control--checkbox mb-0">
+                          <span class="caption">Remember me</span>
+                          <input type="checkbox" checked="checked"/>
+                          <div class="control__indicator"></div>
+                        </label>
+                      </div>
+                      <input type="submit" value="Daftar" class="btn text-white btn-block btn-primary" style="width: 100%;border-radius: 50px; background-color: #00B98E;">
+                      <div>
+                        <span class="d-block text-center my-4 text-muted">Sudah punya akun? <a href="/login"> Masuk</a></span>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+// Menangani respons dari Flask dan menampilkan peringatan jika diperlukan
+    document.addEventListener('DOMContentLoaded', function () {
+      const registerForm = document.getElementById('register-form');
+      const alertMessage = document.getElementById('alert-message');
+
+      registerForm.addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(registerForm);
+        const response = await fetch('/register', {
+          method: 'POST',
+          body: formData,
+        });
+
+        const data = await response.json();
+
+        // Menampilkan peringatan jika pesan error ada
+        if (data.message) {
+          alertMessage.innerText = data.message;
+          alertMessage.style.display = 'block';
+
+          // Menyembunyikan pesan kesalahan setelah form di-submit
+          setTimeout(function () {
+            alertMessage.style.display = 'none';
+            alertMessage.innerText = ''; // Mengosongkan pesan warning
+          }, 2000); // Atur waktu sesuai kebutuhan Anda
+        } else {
+          setTimeout(function () {
+            window.location.href = '/login';
+          }, 1000); // 3000 milidetik = 3 detik
+        }
+      });
+    });
+    // JavaScript untuk toggle password
+    document.addEventListener("DOMContentLoaded", function () {
+      const passwordInput = document.getElementById("password");
+      const togglePassword = document.getElementById("toggle-password");
+
+      togglePassword.addEventListener("click", function () {
+        const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+        passwordInput.setAttribute("type", type);
+
+        // Ganti ikon mata sesuai dengan status password
+        togglePassword.innerHTML = type === "password" ? '<i class="fa fa-eye" aria-hidden="true"></i>' : '<i class="fa fa-eye-slash" aria-hidden="true"></i>';
+      });
+    });
+  </script>
+{% endblock %}

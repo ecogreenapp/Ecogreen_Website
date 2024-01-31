@@ -1,0 +1,48 @@
+{% extends 'layout.html'%} {%block content%}
+<main>
+    <div class="breadcrumbs">
+        <nav>
+            <div class="container">
+                <ol>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li>Aktivtas </li>
+                </ol>
+            </div>
+        </nav>
+    </div><!-- End Breadcrumbs -->
+
+    <section id="tps" class="tps-area" style="background-color: white;">
+        <div class="container" style="margin-top: 3%;">
+            <div class="col-lg-12 wow fadeInUpBig" data-wow-duration="1s">
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-inverse">
+                                    <thead class="thead-inverse">
+                                        <th>Tanggal</th>
+                                        <th>User</th>
+                                        <th>Gambar</th>
+                                        <th>Hasil</th>
+                                    </thead>
+                                    <tbody>
+                                        {% for history_deteksi , user in history_deteksi %}
+                                        <tr>
+                                            <td>{{ history_deteksi.tanggal_deteksi}}</td>
+                                            <td>{{ history_deteksi.user.nama}}</td>
+                                            <td><img src="{{ url_for('static', filename=history_deteksi.file_path.replace('\\', '/')) }}"
+                                                    alt="history detection Image" class="img-fluid" width="100px"></td>
+                                            <td>{{ history_deteksi.hasil_deteksi}}</td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

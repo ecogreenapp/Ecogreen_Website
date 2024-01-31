@@ -1,0 +1,143 @@
+{% extends 'base.html'%} {%block content%}
+<section >
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg " >
+    <div class="container-fluid py-6">
+      <div class="row">
+        <div class="col-12">
+          <div class="card mb-4 bg-white" style="margin-top: 50px;">
+            <div class="card-header pb-0" >
+              <h6>Daftar banksampah
+                            <button type="button" class="btn btn-success float-end"  style="margin-bottom: 1%;"
+                              data-toggle="modal" data-target="#mymodal"><i class="ti ti-plus"></i> banksampah</button>
+            </h6></div>
+            {%with messages = get_flashed_messages()%}
+            {%if messages%}
+            {% for message in messages %}
+            <div class="alert alert-success alert-dismissable" role="alert">
+              {{message}}<button type="button" class="btn-close float-end" data-dismiss="alert"
+                aria-label="close">
+              </button>
+            </div>
+            {%endfor%}
+            {%endif%}
+            {%endwith%}
+            <div class="card-body px-0 pt-0 pb-2" >
+              <div class="table-responsive p-0">
+                <table class="table align-items-center mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nama</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Alamat</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Owner</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">No. Hp</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for databanksampah in data_banksampah %}
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm ">{{ databanksampah.nama }}</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xxs font-weight-bold mb-0">{{ databanksampah.alamat }}</p>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="mb-0 text-sm  font-weight-bold">{{ databanksampah.pj }}</span>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="mb-0 text-sm ">0{{ databanksampah.no_hp }}</span>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <a href="{{ url_for('edit_banksampah', id=databanksampah.id) }}" class="btn btn-warning btn xs" style="margin-bottom: 5px;">
+                          <span><i class="ti ti-pencil"></i></span></a>
+                            <a href="{{ url_for('delete_banksampah', banksampah_id=databanksampah.id) }}" class="btn btn-danger btn-xs" onclick="return confirm('Apakah kamu yakin akan menghapusnya?')">
+                                <span><i class="ti ti-trash"></i></span></a>
+                      </td>
+                    </tr> 
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+                    <!-- START CREATE NEW DATA BANKSAMPAH -->
+          <div id="mymodal" class="modal fade" role"dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title text-primary"
+                    style="align-content: center;">Tambah Data BankSampah</h5>
+                  <button type="button" class="btn-close" data-dismiss="modal"
+                    aria-label="Close">
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form action="/databanksampah" method="POST" onsubmit="return validateForm()">
+                    <div id="error-message" class="alert alert-danger" style="display: none;">
+                        Mohon lengkapi semua kolom.
+                    </div>
+                    <div class="form-group">
+                      <label>Nama</label>
+                      <input type="text" name="nama" class="form-control"
+                        id="nama"
+                        placeholder="Masukkan nama Banksampah">
+                    </div>
+
+                    <div class="form-group">
+                      <label>Alamat</label>
+                      <input name="alamat" type="text" class="form-control"
+                        id="alamat"
+                        placeholder="Masukkan alamat banksampah">
+                    </div>
+
+                    <div class="form-group">
+                      <label>Owner</label>
+                      <input name="pj" type="text" class="form-control"
+                        id="pj"
+                        placeholder="Masukkan owner banksampah">
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 1%;">
+                      <label>No HP</label>
+                      <input name="no_hp" type="number"
+                        class="form-control"
+                        id="no_hp"
+                        placeholder="Masukkan no_hp banksampah" >
+                    </div>
+
+                    <button type="submit"
+                      class="btn btn-primary mb-2">Save</button>
+
+                  </form>
+                    <!-- Script JavaScript untuk validasi formulir -->
+                  <script>
+                    function validateForm() {
+                      var nama = document.getElementById('nama').value;
+                      var alamat = document.getElementById('alamat').value;
+                      var pj = document.getElementById('pj').value;
+                      var no_hp = document.getElementById('no_hp').value;
+
+                      if (nama === '' || alamat === '' || pj === '' || no_hp === '') {
+                        document.getElementById('error-message').style.display = 'block';
+                        return false;
+                      }
+
+                      return true;
+                    }
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</section>
+{% endblock %}

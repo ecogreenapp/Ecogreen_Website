@@ -1,0 +1,95 @@
+{% extends 'layout.html'%} {%block content%}
+<main id="main">
+
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs">
+    <nav>
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Beranda</a></li>
+          <li>Artikel</li>
+        </ol>
+      </div>
+    </nav>
+  </div><!-- End Breadcrumbs -->
+
+  <!-- ======= Blog Section ======= -->
+  <section id="blog" class="blog-list-area">
+    <div class="container">
+      <div class="blog-wrapper">
+        <div class="row">
+          <div class="col-md-8">
+            <h3>Artikel</h3>
+          </div>
+          <div class="col-md-4">
+            <div class="sidebar-search">
+              <form action="/artikel" method="post">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Cari artikel.." value />
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="submit">
+                      <i class="bi bi-search"></i>
+                      <!-- Ini adalah ikon pencarian -->
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          {% for item in artikel.items %}
+          <div class="col-lg-4 blog-col">
+            <div class="single-blog mt-55 wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.4s">
+              <div class="blog-image">
+                <a href="#"><img src="{{url_for('static', filename=item.gambar.replace('\\', '/'))}}" alt></a>
+                <span class="date">{{ item.tanggal.strftime('%A, %d/%m/%Y') }}</span>
+              </div>
+              <div class="blog-content">
+                <h4><a href="{{ url_for('artikeldetails', id=item.id) }}">{{ item.judul }}</a></h4>
+
+                <p style="text-align: justify;">
+                  {{ item.isi_artikel[:100] }}{% if item.isi_artikel|length > 100 %}...{% endif %}
+                </p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="row">
+          <!-- Pagination Links-->
+          <div class="text-right mt-4"> <!-- Added mt-4 class for top margin -->
+            <a href="{{ url_for('artikel', page=artikel.prev_num) }}" class="btn btn-outline-dark 
+    {% if artikel.page == 1 %}disabled{% endif %}">
+              &laquo;
+            </a>
+            <!-- Loop through the number of pages to display a link for each-->
+            {% for page_num in artikel.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+            {% if page_num %}
+            <!-- Check for the active page and set the link to "Active"-->
+            {% if artikel.page == page_num %}
+            <a href="{{ url_for('artikel', page=page_num) }}" class="btn btn-dark">
+              {{ page_num }}
+            </a>
+            {% else %}
+            <a href="{{ url_for('artikel', page=page_num) }}" class="btn btn-outline-dark">
+              {{ page_num }}
+            </a>
+            {% endif %}
+            {% else %}
+            ...
+            {% endif %}
+            {% endfor %}
+            <a href="{{ url_for('artikel', page=artikel.next_num) }}" class="btn btn-outline-dark 
+            {% if artikel.page == artikel.pages %}disabled{% endif %}">
+              &raquo;
+            </a>
+          </div>
+
+        </div>
+      </div>
+  </section>
+
+</main><!-- End #main -->
+{% endblock %}

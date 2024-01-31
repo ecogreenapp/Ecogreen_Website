@@ -1,0 +1,1492 @@
+{
+  "intents": [
+    {
+      "tag": "dialog.introduction",
+      "patterns": [
+        "hai, perkenalkan aku adalah %name%",
+        "hai nama aku adalah %name%",
+        "perkenalkan nama aku %name%",
+        "lo siapa"
+      ],
+      "responses": [
+        "Hai, aku adalah greenBot.",
+        "Hai aku greenBot, Salam kenal.",
+        "perkenalkan aku GreenBot, senang mengenal kamu :)",
+        "Hallo, aku GreenBot, apa ada yang bisa saya bantu?"
+
+      ]
+    },
+    {
+      "tag": "greetings.islam",
+      "patterns": ["assalamualaikum", "assalamualaikum wr.wb", "Assalamualaikum", "Assalamualaikum wr.wb"],
+      "responses": [
+        "Waalaikumsalam! Selamat datang! Bagaimana aku bisa membantu Anda hari ini Jika Anda memiliki pertanyaan atau topik tertentu yang ingin dibahas, silakan beri tahu aku.",
+        "Waalaikumsalam wr.wb! Selamat datang! Bagaimana aku bisa membantu Anda hari ini Jika Anda memiliki pertanyaan atau topik tertentu yang ingin dibahas, silakan beri tahu aku.",
+        "Waalaikumsalam! Selamat datang! Bagaimana aku bisa membantu Anda hari ini Jika Anda memiliki pertanyaan atau topik tertentu yang ingin dibahas, silakan beri tahu aku.",
+        "Waalaikumsalam wr.wb! Selamat datang! Bagaimana aku bisa membantu Anda hari ini Jika Anda memiliki pertanyaan atau topik tertentu yang ingin dibahas, silakan beri tahu aku."
+      ]
+    },
+    {
+      "tag": "nama",
+      "patterns": [
+        "nama kamu siapa",
+        "lu siapa",
+        "siapa sih lo",
+        "lu sape ",
+        "nama lo sape dah ",
+        "nama"
+      ],
+      "responses": [
+        "Hai, perkenalkan aku greenBot, salam kenal kak!",
+        "Halo, aku greenBot!",
+        "Kenalin, aku greenBot!",
+        "aku ini GreenBot, boleh dong kenalan",
+        "Salken aku GreenBot, Kalo kamu?",
+        "namaku GreenBot, nama kamu siapa?"
+      ]
+    },
+    {
+      "tag": "pekerjaan",
+      "patterns": [
+        "lu ngapain",
+        "pekerjaan kamu apa",
+        "lu kerja apa",
+        "tugas kamu apa",
+        "tugas lo ngapain"
+      ],
+      "responses": [
+        "Aku disini untuk memberikan informasi mengenai pengolahan sampah",
+        "Tugasku menjadi asisten virtual untuk membantu kalian di dalam mengatasi masalah sampah",
+        "Aku disini siap membantu anda untuk memahami lebih lanjut tentang sampah",
+        "Aku di sini untuk membantu Anda dengan pertanyaan atau informasi apa pun yang mungkin Anda butuhkan. Ada yang bisa aku bantu?",
+        "tugas aku yaitu untuk memberikan informasi seputar sampah yang mungkin ingin anda ketahui"
+      ]
+    },
+    {
+      "tag": "greetings.kristen",
+      "patterns": ["Salam Kebajikan", "Tuhan memberkati"],
+      "responses": [
+        "Salam Kebajikan! Semoga kebaikan senantiasa menyertai Anda. Jika ada yang dapat aku bantu atau pertanyaan yang ingin Anda ajukan, silakan beritahu aku. aku di sini untuk membantu!",
+        "Tuhan Memberkati! Semoga kebaikan senantiasa menyertai Anda. Jika ada yang dapat aku bantu atau pertanyaan yang ingin Anda ajukan, silakan beritahu aku. aku di sini untuk membantu!"
+      ]
+    },
+    {
+      "tag": "greetings.budha",
+      "patterns": ["Namo Buddhaya"],
+      "responses": [
+        "Namo Buddhaya! Salam sejahtera bagi Anda. Jika ada hal khusus yang ingin Anda diskusikan atau pertanyaan yang ingin diajukan, beri tahu aku. aku di sini untuk membantu!"
+      ]
+    },
+    {
+      "tag": "greetings.kenalan",
+      "patterns": [
+        "salam kenal GreenBot",
+      "kenalan dong"],
+      "responses": [
+        "salam kenal juga, aku GreenBot apakah ada yang bisa aku bantu?",
+        "ayok, perkenalkan nama aku GreenBot aku adalah asisten virtual Saya di sini untuk membantu Anda dengan pertanyaan atau informasi apa pun yang mungkin Anda butuhkan. Ada yang bisa aku bantu?"
+      ]
+    },
+    {
+      "tag": "greetings.Hindu",
+      "patterns": ["Om Swastyastu", "Svasti"],
+      "responses": [
+        "Om Swastyastu! Terima kasih atas ucapan salamnya. Jika ada hal lain yang ingin Anda ketahui atau diskusikan, silakan beri tahu aku. aku di sini untuk membantu"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "greetings.katolik",
+      "patterns": ["Shalom"],
+      "responses": [
+        "Shalom! Salam sejahtera juga untuk Anda. Jika ada pertanyaan atau hal lain yang ingin Anda bahas, silakan beri tahu aku. aku di sini untuk membantu!"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "greetings.hello",
+      "patterns": ["halo", "hai", "hello", "allo", "hallo GreenBot", "hai GreenBot","hello GreenBot"],
+      "responses": ["Hai!", "Halo!", "Hello!", "allo!", "hallo juga kamu!", "hai juga kamu!", "hello juga kamu!"]
+    },
+
+    {
+      "tag": "dialog.holdon",
+      "patterns": [
+        "tunggu",
+        "tunggu sebentar",
+        "harap tunggu",
+        "bisakah kamu menunggu",
+        "sebentar", "tungguin dong"
+      ],
+      "responses": ["aku akan menunggu", "Oke, aku di sini", "iyah aku tungguin kok", "Baik aku akan selalu disini menunggu kamu", "aku pasti akan nungguin kamu terus"]
+    },
+    {
+      "tag": "dialog.thank",
+      "patterns": ["terimakasih", "thank", "thank you", "makasih", "makasih banget"],
+      "responses": [
+        "terimakasih kembali, senang bisa membantumu",
+        "thank u too, senang bisa membantumu",
+        "terimakasih juga, senang bisa membantumu",
+        "thank you too, senang bisa membantumu",
+        "terimakasih kembali, senang bisa membantumu"
+      ]
+    },
+    {
+      "tag": "dialog.idontcare",
+      "patterns": [
+        "tidak peduli",
+        "aku tidak peduli sama sekali",
+        "tidak peduli sama sekali",
+        "aku seharusnya tidak peduli tentang ini"
+      ],
+      "responses": [
+        "Oke, mari kita tidak membicarakannya!",
+        "Baiklah. Mari kita lanjutkan!",
+        "maaf jika aku ada salah!",
+        "baiklah apakah ada hal lain yang mungkin bisa aku bantu?"
+      ]
+    },
+    {
+      "tag": "dialog.sorry",
+      "patterns": ["aku minta maaf", "sangat menyesal", "maafkan aku", "maaf", "maafin aku yah"],
+      "responses": [
+        "Tidak apa-apa. Jangan khawatir.",
+        "Sudahlah tidak perlu dipikirkan.",
+        "jangan meminta maaf, kamu tidak salah apa-apa.",
+        "sudah lupakan saja, mari kita membicarakan hal lain.",
+        "kamu tidak perlu meminta maaf, mungkin ada yang bisa saya bantu"
+      ]
+    },
+    {
+      "tag": "dialog.kabar",
+      "patterns": ["apa kabarmu", "kamu apa kabar", "apakah kamu baik-baik saja", "gimana kabarmu", "bagaimana kabar kamu hari ini?"], 
+      "responses": [
+        "Hari ini saya senang sekali, Bagaimana dengan anda?",
+        "Halo! Saya adalah GreenBot yang siap membantu Anda. Kabar saya baik, Bagaimana dengan anda hari ini?",
+        "Hari ini saya senang sekali, Bagaimana dengan anda?",
+        "Tentu saja baik, kalo kamu bagaimana kabarnya?",
+        "kabar aku sangat baik, bagaimana dengan kabarrmu?"
+      ]
+    },
+    {
+      "tag": "dialog.introduction",
+      "patterns": [
+        "hai, perkenalkan aku adalah %name%",
+        "hai nama aku adalah %name%",
+        "perkenalkan nama aku %name%"
+      ],
+      "responses": [
+        "Hi, aku adalah GreenBot.",
+        "aku virtual agent, Salam kenal."
+      ]
+    },
+    {
+      "tag": "greetings.bye",
+      "patterns": [
+        "selamat tinggal untuk sekarang",
+        "selamat tinggal hati-hati",
+        "oke sampai jumpa lagi",
+        "selamat tinggal untuk sekarang",
+        "Dah",
+        "Daah",
+        "aku harus pergi"
+      ],
+      "responses": [
+        "Sampai nanti",
+        "sampai jumpa lagi!",
+        "aku berharap kita ketemu lagi.",
+        "Kalau ada masalah, hubungi aku lagi ya",
+        "jumpa lagi, tidak sabar untuk bertemu anda kembali",
+        "selamat tinggal, serta jumpa kembali",
+        "bye bye jangan merindukanku yah"
+      ]
+    },
+    {
+      "tag": "greetings.howareyou",
+      "patterns": [
+        "bagaimana harimu",
+        "bagaimana hari mu",
+        "apa kabar",
+        "bagaimana kabarmu",
+        "bagaimana dengan harimu",
+        "apa kamu baik baik saja"
+      ],
+      "responses": [
+        "Merasa luar biasa!",
+        "Luar biasa! Terima kasih telah bertanya",
+        "kabar saya sangat baik, kabarmu bagaimana?",
+        "kabarku selalu baik apalagi setelah bertemu denganmu",
+        "hari-hari ku sangat bahagia bagaimana denganmu?",
+        "aku baik-baik saja, bagaimana denganmu? apa ada yang bisa aku bantu"
+      ]
+    },
+    {
+      "tag": "greetings.nicetomeetyou",
+      "patterns": [
+        "senang bertemu denganmu",
+        "aku sangat senang bertemu denganmu",
+        "senang jumpa kamu",
+        "senang"
+      ],
+      "responses": [
+        "Senang bertemu denganmu juga",
+        "Begitu juga. Aku berharap bisa membantumu",
+        "Senang bertemu denganmu, juga",
+        "Kamu senang aku pun ikut senang"
+      ]
+    },
+    {
+      "tag": "greetings.nicetoseeyou",
+      "patterns": [
+        "senang bisa melihat dirimu",
+        "senang melihatmu",
+        "senang mengenalmu"
+      ],
+      "responses": [
+        "Aku juga sangat senang bisa melihatmu kembali",
+        "Begitupun aku juga senang melihatmu",
+        "aku juga sangat senang bisa mengenalmu"
+      ]
+    },
+    {
+      "tag": "greetings.nicetotalktoyou",
+      "patterns": [
+        "senang berbicara denganmu",
+        "aku senang bisa mengobrol denganmu",
+        "aku mengobrol denganmu"
+      ],
+      "responses": [
+        "Kita bisa ngobrol lagi dilain waktu.",
+        "Aku juga senang ngobrol denganmu.",
+        "ayok kita mulai mengobrol, bagaimana jika membahas tentang sampah?"
+      ]
+    },
+
+    {
+      "tag": "greetings.whatareyoudoing",
+      "patterns": [
+        "lagi apa",
+        "sedang apa",
+        "kamu sedang apa",
+        "kamu lagi apa",
+        "Lagi ngapain"
+      ],
+      "responses": [
+        "Mengobrol dengan kamu",
+        "Menunggu balasan dari kamu",
+        "lagi nungguin kamu",
+        "sedang menunggu pertanyaan darimu hehe",
+        "lagi menunggu kamu nih"
+      ]
+    },
+    {
+      "tag": "kemampuan",
+      "patterns": [
+        "kamu bisa apa",
+        "apa yang bisa anda lakukan",
+        "kamu bisa ngapain aja",
+        "lo bisa ngapain",
+        "apa kemampuan lo"
+      ],
+      "responses": [
+        "Kakak bisa tanya-tanya nama aku, apa yang aku lakukan dan yang berhubungan dengan Sampah",
+        "Pokoknya semua topik yang berhubungan dengan Sampah kak :)",
+        "Saya dapat memberikan informasi tentang topik seputar sampah.",
+        "Jika Anda memiliki masalah atau pertanyaan, saya dapat mencoba membantu Anda menemukan solusinya.",
+        "Aku bisa memberikan anda informasi tentang topik sampah"
+      ]
+    },
+    {
+      "tag": "greetings.day",
+      "patterns": ["pagi", "selamat pagi" ,"Hai selamat Pagi", "Hallo selamat pagi"],
+      "responses": ["Pagi juga", "Selamat Pagi juga", "Hai juga, selamat Pagi", "Hallo juga, selamat pagi"]
+    },
+    {
+      "tag": "greetings.noon",
+      "patterns": ["siang", "selamat siang", "Hai selamat siang", "Hallo selamat siang"],
+      "responses": ["Siang juga", "Selamat Siang juga", "Hai juga, selamat siang", "Hallo juga, selamat siang"]
+    },
+    {
+      "tag": "greetings.afternoon",
+      "patterns": ["sore", "selamat sore",  "Hai selamat sore", "Hallo selamat sore"],
+      "responses": ["Sore juga", "Selamat Sore juga", "Hai juga, selamat sore", "Hallo juga, selamat sore"]
+    },
+    {
+      "tag": "greetings.night",
+      "patterns": ["malam", "selamat malam", "Hai juga, selamat malam", "Hallo juga, selamat malam"],
+      "responses": ["malam juga", "selamat malam juga", "Hai juga, selamat malam", "Hallo juga, selamat malam"]
+    },
+    {
+      "tag": "dialog.artisampah",
+      "patterns": [
+        "sampah",
+        "sampah adalah",
+        "apa arti sampah",
+        "apa yang dimaksud dengan sampah"
+      ],
+      "responses": [
+        "Sampah adalah bahan yang tidak diinginkan atau tidak terpakai yang perlu dibuang.",
+        "Sampah adalah sesuatu yang tidak dapat digunakan, tidak dipakai, tidak disenangi dan sesuatu yang dibuang yang berasal dari kegiatan manusia dan tidak terjadi dengan sendirinya",
+        "Sampah adalah sisa buangan dari suatu produk atau barang yang sudah tidak digunakan lagi, tetapi masih dapat di daur ulang menjadi barang yang bernilai.",
+        "Sampah adalah buangan yang dihasilkan dari suatu proses produksi baik domestik (rumah tangga) maupun industri."
+      ]
+    },
+    {
+      "tag": "dialog.jenisampah",
+      "patterns": [
+        "Apa saja jenis-jenis sampah",
+        "sebutkan jenis sampah",
+        "sampah ada berapa macam"
+      ],
+      "responses": [
+        "Sampah Organik, Sampah non organik, Bahan berbahaya dan beracun (B3) , Sampah Medis, Sampah Konstruksi dan Bangunan,Sampah Elektronik (E-waste), Sampah Hijau, Sampah Plastik, Sampah Kertas, Sampah Logam"
+      ]
+    },
+    {
+      "tag": "dialog.artiorganik",
+      "patterns": [
+        "sampah organik adalah",
+        "apa arti sampah organik",
+        "apa yang dimaksud dengan sampah organik",
+        "apa sih sampah organik itu",
+        "sampah organik itu apa",
+        "sampah organik adalah",
+        "pengertian sampah organik"
+      ],
+      "responses": [
+        "Sampah organik adalah jenis sampah yang berasal dari bahan-bahan yang dapat terurai secara alami oleh mikroorganisme.",
+        "Sampah organik yaitu sampah yang berasal dari sisa mahkluk hidup yang mudah terurai secara alami tanpa proses campur tangan manusia untuk dapat terurai."
+      ]
+    },
+    {
+      "tag": "dialog.artinonOrganik",
+      "patterns": [
+        "sampah non organik adalah",
+        "apa itu sampah non organik",
+        "apa arti sampah non organik",
+        "apa sih sampah non organik itu",
+        "apa yang dimaksud dengan sampah non organik",
+        "sampah non organik adalah",
+        "pengertian sampah non organik"
+      ],
+      "responses": [
+        "Sampah anorganik adalah sampah yang tidak mudah membusuk, seperti plastik wadah pembungkus makanan, kertas, plastik mainan, botol dan gelas minuman, kaleng, kayu, dan sebagainya.",
+        "Sampah non-organik adalah jenis sampah yang tidak dapat terurai atau diuraikan oleh proses alami dengan cepat. Sampah ini cenderung bersifat permanen atau memerlukan waktu yang sangat lama untuk terurai.",
+        "Sampah anorganik adalah semacam sampah atau sisa bahan yang tidak mudah membusuk yang lazimnya bukan bermula dari hewan dan tumbuhan"
+      ]
+    },
+
+    {
+      "tag": "dialog.artiGalon",
+      "patterns": [
+        "sampah galon adalah",
+        "apa itu sampah galon",
+        "apa arti sampah galon",
+        "apa sih sampah galon itu",
+        "apa yang dimaksud dengan sampah galon",
+        "sampah galon adalah",
+        "pengertian sampah galon"
+      ],
+      "responses": [
+        "Galon adalah jenis sampah plastik tebal yang tidak bisa cepat terurai karena bahan dasar plastiknya yang sangat tebal sehingga untuk mengurangi pencemaran maka harus dibuatkan daur ulangnya.",
+        "Sampah galon merujuk pada limbah atau sisa dari galon air minum, yang biasanya terbuat dari plastik.",
+        "Galon air minum sering digunakan untuk menyimpan air minum dalam jumlah besar, dan setelah galon tersebut kosong, dapat menjadi jenis sampah plastik.",
+        "sampah galon dapat merujuk pada limbah plastik yang berasal dari galon air minum. Setelah galon air habis digunakan, botol plastik tersebut dapat menjadi jenis sampah yang perlu diurus dengan benar, seperti melalui daur ulang."
+      ]
+    },
+    {
+      "tag": "dialog.artiSampahBerbahaya",
+      "patterns": [
+        "sampah berbahaya adalah",
+        "apa itu sampah sampah berbahaya",
+        "apa arti sampah berbahaya",
+        "apa sih sampah berbahaya itu",
+        "apa yang dimaksud dengan sampah berbahaya"
+      ],
+      "responses": [
+        "Sampah berbahaya merujuk kepada jenis sampah yang dapat menimbulkan bahaya terhadap kesehatan manusia, lingkungan, atau hewan jika tidak dikelola dengan benar. Sampah ini cenderung mengandung zat-zat yang berpotensi merusak atau mencemari lingkungan.",
+        "Sampah berbahaya adalah jenis sampah yang mengandung bahan-bahan yang dapat menimbulkan risiko serius terhadap kesehatan manusia dan lingkungan jika tidak dikelola dengan benar.",
+        "Sampah berbahaya merupakan jenis sampah yang di dalamnya mengandung bahan-bahan yang dapat menimbulkan risiko serius terhadap kesehatan manusia dan lingkungan. Sifat berbahaya sampah ini bisa berasal dari sifat fisik, kimia, atau biologisnya.",
+        "Sampah berbahaya dapat mencakup berbagai jenis bahan, termasuk bahan kimia beracun, logam berat, bahan nuklir, dan bahan berbahaya lainnya."
+      ]
+    },
+    {
+      "tag": "dialog.holdon",
+      "patterns": [
+        "tunggu",
+        "tunggu sebentar",
+        "harap tunggu",
+        "bisakah kamu menunggu",
+        "sebentar"
+      ],
+      "responses": [
+        "aku akan menunggu",
+        "Oke, aku di sini",
+        "aku, akan tetap disini membantu anda",
+        "Baik, aku akan menunggu disini",
+        "baik, silahkan ambil waktu untuk beristirahat"
+      ]
+    },
+    {
+      "tag": "dialog.dampakSampah",
+
+      "patterns": [
+        "Apa dampak dari pembuangan sampah sembarangan",
+        "dampak pengelolaan sampah yang tidak benar apa saja",
+        "dampak sampah pada lingkungan seperti bagaimana"
+      ],
+      "responses": [
+        "Dampak membuang sampah sembarangan akan merusak pemandangan, mendatangkan bau yang tidak sedap, mendatangkan banjir level rendah sampai yang tinggi, mendatangkan berbagai penyakit dan dapat mencemari lingkungan.",
+        "Pengelolaan sampah yang tidak benar dapat memiliki sejumlah dampak negatif terhadap lingkungan, kesehatan manusia, dan keberlanjutan sumber daya.",
+        "Selain mencemari air sungai, pembuangan limbah atau sampah juga dapat menghambat proses air tanah dan tentu saja ini merupakan sebuah kabar buruk mengingat air tanah sangatlah penting bagi manusia. Selain mencemari sungai dan menghambat proses air tanah, sampah juga dapat mencemari tanah dan menjadikannya tidak sehat."
+      ]
+    },
+    {
+      "tag": "dialog.manfaatSampah",
+      "patterns": [
+        "manfaat sampah apa saja",
+        "sebutkan macam-macam manfaat sampah"
+      ],
+      "responses": [
+        "Dijadikan Pupuk Kompos, Dijadikan Bahan Kerajinan", "Digunakan Kembali (Reusable)", "Diubah Menjadi Media Tanam", "Bahan Biogas dan Listrik",
+        "Manfaat pengolahan sampah dengan baik dapat pula menghemat sumber daya alam yang ada. Sehingga bahan alam dapat terawat dengan baik. Seperti penggunaan tissue yang terbuat dari serat pohon yang membuat hutan menjadi rusak yang kemudian berpengaruh terhadap ekosistem yang ada didalamnya."
+
+      ]
+    },
+    {
+      "tag": "dialog.penanggulangan",
+      "patterns": [
+        "Bagaimana cara untuk menanggulangi Sampah",
+        "sebutkan tips untuk menanggulangi sampah",
+        "bentuk penanggulangan sampah apa saja"
+      ],
+      "responses": [
+        "Pemilahan Sampah, Daur Ulang, Mengurangi Penggunaan Plastik, Mengompos Sampah Organik, Pengurangan Sampah pada Sumbernya",
+        "Penanggulangan Sampah Dengan Cara Dibakar, Penanggulangan Sampah Dengan Cara Ditimbun, Penanggulangan Sampah Dengan Cara Dibuang Kelaut",
+        "Membawa Kantong Belanja Sendiri, Membawa Botol Minum atau Tumbler, Tidak Menggunakan Sedotan Plastik, Hindari Membeli Makanan dan Minuman Kemasan Plastik, Daur Ulang Sampah Plastik"
+      
+      ]
+    },
+    {
+      "tag": "dialog.TipsMengelolaSampah",
+      "patterns": [
+        "Bagaimana tips mengelola sampah",
+        "Apa saja tips mengelola sampah",
+        "mengelola sampah",
+        "pengolahan sampah",
+        "tips mengelola sampah"
+      ],
+      "responses": [
+        " Memilah Jenis Sampah Terdapat tiga jenis sampah menurut material atau bahan bakunya, yaitu organik, anorganik, serta bahan berbahaya dan beracun (B3). Ketiga sampah ini perlu dipilah sesuai jenisnya agar mudah diolah.",
+        "Menerapkan 3R dalam Penanganan Sampah Prinsip 3R adalah reduce (mengurangi timbunan sampah), reuse (menggunakan kembali), dan recycle (daur ulang sampah).",
+        "Membuat Tempat Pembuatan Kompos Memiliki sarana pembuatan kompos di rumah akan memudahkan dalam mengurangi sampah organik. Sebab, sampah organik adalah penyumbang sampah terbanyak di Indonesia. Cara pengolahan sampah dengan membuat kompos juga bermanfaat jika Anda memiliki kebun kecil di rumah. Pasalnya, kompos bisa menjadi pupuk yang ramah lingkungan dan bebas bahan-bahan kimia."
+      ]
+    },
+    {
+      "tag": "dialog.bedaOrganikdanNon",
+      "patterns": [
+        "perbedaan organik dan non organik",
+        "Apa bedanya organik dan non organik",
+        "bedanya organik dengan non organik",
+        "Apa saja perbedaan dari sampah organik dan non organik"
+      ],
+      "responses": [
+        "Berdasarkan Asalnya Untuk mengetahui perbedaan kedua limbah ini, bisa dimulai dengan asalnya atau sumbernya. Limbah organik biasanya berasal dari sisa-sisa makhluk hidup yang sifatnya memang organik. Biasanya adalah berasal dari kotoran binatang, daun, ranting, kayu, sisa-saia makanan, buah, sayuran dan lain sebagainya. Sifatnya memang mudah membusuk dan mudah diuraikan. Sementara asal atau sumber limbah anorganik adalah dari kegiatan produksi atau aktivitas manusia. Ada proses pencampuran senyawa kimia dalam menghasilkan sampah tersebut. Sumbernya tidak berasal dari organisme yang hidup, melainkan benda-benda mati. Seperti halnya plastik, kaca, botol minum, bungkus makanan dan lain-lain.",
+        "Kemudahan Dekomposisi Perbedaan limbah organik dan anorganik yang berikutnya ada dari kemudahannya untuk mengalami proses dekomposisi. Apakah suatu limbah mudah diuraikan atau tidak Untuk limbah organik merupakan limbah yang memiliki sifat urai tinggi. Karena asalnya yang merupakan dari makhluk hidup, membuat limbah ini juga mudah diuraikan oleh mikroorganisme. Sementara itu, untuk limbah anorganik sifatnya cenderung sulit untuk diuraikan. Membutuhkan waktu puluhan hingga ratusan tahun agar dapat benar-benar terurai. Seringkali limbah anorganik menimbulkan banyak masalah jika tidak dikelola sebagaimana mestinya. Dampak buruknya bahkan hingga merugikan banyak sektor salah satunya lingkungan dan juga kesehatan makhluk hidup.",
+        "Menurut Jenisnya Terdapat beberapa contoh limbah yang termasuk ke dalam limbah organik, yaitu dari sisa makanan, daun dan ranting berguguran, bangkai binatang, sisa-sisa sayuran ataupun buah-buahan, tinja dan banyak lainnya.  Sementara itu, untuk beberapa jenis dari limbah anorganik mencakup botol minuman, pecahan kaca, bungkus makanan, sampah plastik, elektronik rusak, kresek, ban bekas, besi, logam dan lain sebagainya yang memang tidak berasal dari makhluk hidup. ",
+        "Berdasarkan Cara Pengolahannya Perbedaan limbah organik dan anorganik lainnya adalah berdasar pada cara pengolahannya. Untuk bisa mengolah kedua jenis limbah ini diperlukan dua cara yang juga berbeda. Satu hal yang utama dan pasti adalah melakukan pemisahan antara sampah organik dan sampah anorganik. Sehingga lebih memudahkan petugas atau mesin dalam melakukan sortir dan daur ulang. Sistem olah limbah diciptakan untuk menangani kedua limbah yang berbeda penangannya. Limbah organik cenderung mudah diolah karena bisa diuraikan dengan mudah oleh mikroorganisme. Anda bisa menimbunnya saja di tanah galian maka mikroorganisme akan bisa melakukan dekomposisi. Sementara untuk limbah anorganik bisa dilakukan pengolahannya dengan cara daur ulang untuk dijadikan produk lainnya yang memiliki nilai lebih tinggi.",
+        "Ketahanan Akan Panas Jika berbicara mengenai ketahanan kedua limbah ini akan adanya panas. Untuk limbah organik lebih mudah terbakar, dibandingkan dengan limbah anorganik yang memiliki ketahanan akan panas.",
+        "Reaksi yang Dihasilkan Berdasarkan adanya sebuah penelitian, limbah organik reaksinya terhitung lambat dan tidak bisa menghasilkan senyawa garam. Sementara itu, untuk limbah anorganik reaksinya tergolong lebih cepat dan bisa menghasilkan senyawa garam."
+      ]
+    },
+    {
+      "tag": "dialog.sampahB3",
+      "patterns": [
+        "apa yang dimaksud sampah B3",
+        "sampah B3",
+        "sampah B3 adalah",
+        "jelaskan arti sampah B3",
+        "pengertian sampah B3"
+      ],
+      "responses": [
+        "Kata B3 merupakan akronim dari bahan beracun dan berbahaya. Oleh karena itu, pengertian limbah B3 dapat diartikan sebagai suatu buangan atau limbah yang sifat dan konsentrasinya mengandung zat yang beracun dan berbahaya sehingga secara langsung maupun tidak langsung dapat merusak lingkungan, mengganggu kesehatan, dan mengancam kelangsungan hidup manusia serta organisme lainya.",
+        "Sampah B3 dapat diartikan sebagai suatu buangan atau limbah yang sifat dan konsentrasinya mengandung zat yang beracun dan berbahaya sehingga secara langsung maupun tidak langsung dapat merusak lingkungan, mengganggu kesehatan, dan mengancam kelangsungan hidup manusia serta organisme lainya.",
+        "Sampah Bahan Berbahaya dan Beracun yang selanjutnya disebut Limbah B3 adalah sisa suatu usaha dan/atau kegiatan yang mengandung B3"
+      ]
+    },
+    {
+      "tag": "dialog.sampahMedis",
+      "patterns": [
+        "apa yang dimaksud sampah medis",
+        "sampah medis",
+        "apa sih sampah medis itu",
+        "sampah medis adalah",
+        "jelaskan arti dari sampah medis",
+        "pengertian sampah medis"
+      ],
+      "responses": [
+        "Sampah medis merupakan sampah yang berasal dari pelayanan medis yang menggunakan bahan-bahan yang beracun, infeksius, dan berbahaya.",
+        "Sampah medis, juga dikenal sebagai limbah medis atau limbah kesehatan, adalah jenis sampah yang dihasilkan dari fasilitas kesehatan, seperti rumah sakit, klinik, laboratorium medis, dan fasilitas perawatan kesehatan lainnya",
+        "Sampah medis adalah hasil kegiatan medis seperti penelitian, pengujian, diagnosis, imunisasi, ataupun perawatan manusia yang memiliki kandungan infeksius, itulah yang disebut limbah dari dunia medis. Komponen sisa atau buangan dari lembaga atau layanan kesehatan seperti rumah sakit, klinik, tempat praktek dokter, laboratorium, dan sebagainya. Limbah dari bidang medis bisa digolongkan sebagai limbah bahan berbahaya dan beracun (B3) yang berdampak negatif jika lingkungan dan makhluk hidup di dalamnya langsung terkontaminasi."
+      ]
+    },
+    {
+      "tag": "dialog.sampahKonstruksiBangunan",
+      "patterns": [
+        "apa yang dimaksud sampah kontruksi bangunan",
+        "sampah kontruksi bangunan yang bagaimana",
+        "apa sih sampah sampah kontruksi bangunan itu",
+        "sampah sampah kontruksi bangunan adalah",
+        "jelaskan arti dari sampah sampah kontruksi bangunan",
+        "pengertian sampah sampah kontruksi bangunan"
+      ],
+      "responses": [
+        "sisa material konstruksi yang berasal dari pembangunan atau renovasi bangunan milik pribadi, komersil dan struktur lainnya. Sisa material tersebut berupa sampah yang terdiri dari beton, batu bata, plesteran, kayu, sirap, pipa, dan komponen listrik.",
+        "Sampah konstruksi didefinisikan sebagai sesuatu bahan yang tidak digunakan dan merupakan hasil dari proses konstruksi yang berjumlah besar sehingga menimbulkan dampak negatif pada lingkungan sekitar. Bahan tersebut bisa berupa batu, beton, batu bara, atap, instalasi listrik dan lain sebagainya.",
+        "Limbah konstruksi bangunan merujuk pada sisa-sisa dan material yang dihasilkan dari proses konstruksi, renovasi, atau penghancuran bangunan. Limbah ini berasal dari berbagai jenis proyek konstruksi, termasuk pembangunan gedung, rumah, infrastruktur, dan proyek-proyek konstruksi lainnya. Limbah konstruksi bangunan dapat berupa material-material yang tidak lagi diperlukan atau sisa-sisa yang dihasilkan selama proses pembangunan atau renovasi."
+      ]
+    },
+    {
+      "tag": "dialog.sampahHijau",
+      "patterns": [
+        "apa yang dimaksud sampah hijau",
+        "sampah hijau yang bagaimana",
+        "sampah hijau",
+        "sampah hijau adalah",
+        "jelaskan arti dari sampah hijau",
+        "pengertian sampah hijau"
+      ],
+      "responses": [
+        "Sampah hijau, atau juga dikenal sebagai limbah organik, merujuk pada jenis sampah yang berasal dari material organik yang dapat terurai secara alami. Sampah hijau ini biasanya berasal dari sisa-sisa tanaman, rumput, dedaunan, ranting, dan bahan organik lainnya yang dapat terurai. Seiring waktu, sampah hijau dapat mengalami dekomposisi alami oleh mikroorganisme seperti bakteri dan jamur."
+      ]
+    },
+    {
+      "tag": "dialog.sampahElektronik",
+      "patterns": [
+        "apa yang dimaksud sampah elektronik",
+        "sampah elektronik",
+        "apa sih sampah elektronik itu",
+        "sampah elektronik adalah",
+        "jelaskan arti dari sampah elektronik",
+        "pengertian sampah med"
+      ],
+      "responses": [
+        "sampah elektronik adalah salah satu jenis sampah spesifik, yang mengandung Bahan Berbahaya dan Beracun (B3). Pada awalnya, perhatian atas dampak lingkungan dari produk elektronik adalah lamanya masa pakai atau kebutuhan energi saat konsumen menggunakan produk.",
+        "Sampah elektronik, atau disingkat sebagai e-waste (electronic waste), merujuk pada segala jenis barang elektronik atau listrik yang sudah tidak terpakai atau sudah rusak dan tidak dapat digunakan kembali. Sampah elektronik sering kali mengandung bahan-bahan berbahaya yang dapat merugikan lingkungan dan kesehatan manusia jika tidak dikelola dengan benar."
+      ]
+    },
+    {
+      "tag": "dialog.sampahKertas",
+      "patterns": [
+        "apa yang dimaksud sampah kertas",
+        "sampah kertas",
+        "apa sih sampah kertas itu",
+        "sampah kertas adalah",
+        "jelaskan arti dari sampah kertas",
+        "pengertian sampah kertas"
+      ],
+      "responses": [
+        "Sampah kertas juga merupakan jenis sampah yang dapat dipilah secara khusus dalam wadah tempat sampah berwarna biru.Pemilahan sampah kertas berguna untuk memudahkan proses daur ulang kertas. Karton, potongan kertas, pamflet, bungkus kemasan berbahan kertas, dan buku juga termasuk dalam jenis sampah kertas.",
+        "Sampah kertas merupakan bahan buangan sisa proses produksi maupun pemakaian yang mengandung berbagai komponen seperti selulosa, hemiselulosa, lignin, bahan ekstraktif, larutan Cl2, hidrogen peroksida, asam parasetat, dan sebagainya dengan karakteristik warna yang kehitaman atau keruh, bau khas, kandungan COD yang tinggi, dan tahan terhadap oksidasi biologis.",
+        "Sampah kertas merujuk pada limbah yang terbuat dari bahan kertas atau kardus. Sampah ini termasuk berbagai jenis produk kertas yang sudah tidak terpakai atau tidak dibutuhkan lagi."
+      ]
+    },
+    {
+      "tag": "dialog.sampahPlastik",
+      "patterns": [
+        "apa yang dimaksud sampah plastik",
+        "sampah plastik",
+        "apa sih sampah plastik itu",
+        "sampah plastik adalah",
+        "jelaskan arti dari sampah plastik",
+        "pengertian sampah plastik"
+      ],
+      "responses": [
+        "Sampah plastik adalah semua barang bekas atau tidak terpakai yang materialnya diproduksi dari bahan kimia tak terbarukan. Sebagian besar sampah plastik yang digunakan sehari-hari biasanya dipakai untuk pengemasan.",
+        "Sampah plastik merupakan salah satu jenis sampah yang memberikan ancaman serius terhadap lingkungan karena selain jumlahnya cenderung semakin besar, kantong plastik adalah jenis sampah yang sulit terurai oleh proses alam (non biodegradable) dan merupakan salah satu pencemar xenobiotik (pencemar yang tidak dikenal oleh sistem biologis di lingkungan mengakibatkan senyawa pencemar terakumulasi di alam).",
+        "Sampah plastik merujuk pada limbah yang terbuat dari bahan plastik atau polimer. Plastik adalah material sintetis yang umumnya terdiri dari molekul organik besar yang membentuk rantai panjang atau jaringan. Sampah plastik menjadi perhatian serius karena plastik sulit terurai secara alami di lingkungan dan dapat menyebabkan dampak negatif pada ekosistem dan kesehatan manusia."
+      ]
+    },
+    {
+      "tag": "dialog.sampahLogam",
+      "patterns": [
+        "apa yang dimaksud sampah logam",
+        "sampah logam",
+        "apa sih sampah logam itu",
+        "sampah logam adalah",
+        "jelaskan arti dari sampah logam",
+        "pengertian sampah logam"
+      ],
+      "responses": [
+        "Sampah logam adalah limbah yang di mana keberadaannya dalam jumlah tertentu sangat dibutuhkan oleh organisme hidup, namun dalam jumlah yang berlebihan dapat menimbulkan efek racun. untuk memilah dan mendeteksi sampah logam, contoh sampah logam (tembaga darikabel, baut besi, kaleng minuman).",
+        " Sampah logam merupakan limbah yang mudah dipisahkan dari timbunan sampah dan dapat didaur ulang menjadi barang – barang yang bernilai seni, dilebur kembali sebagai menjadi material asalnya, dan juga dapat dimanfaatkan sebagai campuran semen dan sebagainya",
+        "Sampah logam merujuk pada limbah yang terdiri dari bahan-bahan logam yang tidak terpakai atau sudah tidak diperlukan lagi. Logam merupakan material yang dapat di daur ulang dan memiliki nilai ekonomis, sehingga pengelolaan sampah logam dapat mencakup praktik daur ulang untuk memanfaatkan kembali bahan-bahan berharga yang terkandung di dalamnya."
+      ]
+    },
+    {
+      "tag": "dialog.sulitdidaur",
+      "patterns": [
+        "apa yang dimaksud sampah sulit di daur ulang",
+        "sampah sulit di daur ulang",
+        "apa sih sampah sulit di daur ulang itu",
+        "sampah sulit di daur ulang adalah",
+        "jelaskan arti dari sampah sulit di daur ulang",
+        "pengertian sampah sulit di daur ulang"
+      ],
+      "responses": [
+        "Sampah residu merupakan produk atau barang sisa yang memang tidak lagi bisa diproses menjadi barang baru lainnya. Waste4Change mendefinisikan sampah residu sebagai sampah yang sulit didaur ulang baik karena alasan keterbatasan teknologi, biaya, sumber daya alam, maupun sumber daya manusia.",
+        "Sampah sulit didaur ulang adalah jenis sampah yang memiliki beberapa karakteristik yang membuatnya sulit atau tidak efisien untuk diolah kembali menjadi bahan baku atau produk baru melalui proses daur ulang konvensional"
+      ]
+    },
+    {
+      "tag": "dialog.3R",
+      "patterns": [
+        "Apa itu 3R",
+        "apa yang dimaksud 3R",
+        "apa itu 3R",
+        "contoh dari 3R",
+        "pengertian 3R",
+        "jelaskan arti dari 3R"
+      ],
+      "responses": [
+        "3R yaitu Reduce, Reuse, Recycle” merupakan maksud penanganan sampah yang terdiri dari tiga unsur yaitu, “Mengurangi”, “Menggunakan ulang” dan “Mendaur ulang” sampah (juga dikenal sebagai 3R). Untuk memulai melakukan 3R ini memang dapat dilakukan oleh siapa saja.",
+        "3R artinya Reuse berarti menggunakan kembali sampah yang masih dapat digunakan untuk fungsi yang sama ataupun fungsi lainnya. Reduceberarti mengurangi segala sesuatu yang mengakibatkan sampah. Dan Recycle berarti mengolah kembali (daur ulang) sampah menjadi barang atau produk baru yang bermanfaat.",
+        "3R adalah singkatan dari Reduce, Reuse, dan Recycle, yang merupakan prinsip-prinsip utama dalam pengelolaan limbah dan konsep dasar dari pendekatan berkelanjutan terhadap pengelolaan sumber daya.",
+        "Reduce (Mengurangi):  Prinsip ini mendorong untuk mengurangi produksi sampah dengan meminimalkan penggunaan bahan-bahan atau produk yang menghasilkan limbah. Cara mengurangi dapat melibatkan pemilihan produk yang memiliki kemasan minimal, menggunakan kembali tas belanja, atau meminimalkan penggunaan bahan sekali pakai, Reuse (Menggunakan Kembali): Prinsip ini mengajarkan untuk memanfaatkan kembali barang atau produk sebanyak mungkin sebelum membuangnya. Cara menggunakan kembali dapat melibatkan mendaur ulang barang atau produk, seperti mendaur ulang kertas atau botol plastik, atau memberikan barang yang masih layak pakai kepada orang lain, Recycle (Mendaur Ulang) : Prinsip ini melibatkan proses pengumpulan, pemilahan, dan pengolahan kembali sampah untuk menghasilkan bahan baku baru. Mendaur ulang membantu mengurangi penggunaan sumber daya alam dan mengurangi jumlah sampah yang masuk ke tempat pembuangan sampah."
+      ]
+    },
+    {
+      "tag": "dialog.kompos",
+      "patterns": [
+        "apa yang dimaksud kompos",
+        "kompos itu",
+        "apa sih kompos itu",
+        "kompos adalah",
+        "jelaskan arti dari kompos",
+        "pengertian kompos"
+      ],
+      "responses": [
+        "Pengertian kompos adalah bahan-bahan organik yang sudah mengalami proses pelapukan karena terjadi interaksi antara mikroorganisme atau bakteri pembusuk yang bekerja di dalam bahan organik tersebut",
+        "Kompos adalah pupuk yang terbuat dari sampah organik yang kaya akan unsur Karbon dan Nitrogen. Secara alami, sampah organik akan mengalami pembusukan dan peruraian oleh ratusan jenis mikroba (bakteri, jamur, ragi) dan berbagai jenis binatang kecil yang hidup di tanah. Proses alami inilah yang dimanfaatkan untuk mengelola sampah organik menjadi pupuk. Sampah basah (organik) adalah jenis sampah yang dapat diolah menjadi kompos yang terdiri atas bahan-bahan organik.",
+        "Kompos adalah hasil dari proses pengomposan, yaitu penguraian bahan organik oleh mikroorganisme menjadi bahan yang lebih stabil dan berguna untuk tanah. Proses ini disebut juga sebagai dekomposisi alami, di mana mikroorganisme seperti bakteri, jamur, dan organisme lainnya memecah bahan organik menjadi humus yang kaya akan nutrisi. Humus ini kemudian dapat digunakan sebagai pupuk alami yang baik untuk tanaman."
+      ]
+    },
+    {
+      "tag": "dialog.tpa",
+      "patterns": [
+        "Apa itu TPA",
+        "apa yang dimaksud TPA",
+        "TPA",
+        "pengertian TPA",
+        "jelaskan arti dari TPA"
+      ],
+      "responses": [
+        "TPA adalah singkatan dari Tempat Pembuangan Akhir. Tempat Pembuangan Akhir adalah suatu lokasi yang digunakan untuk mengelola dan memproses sampah atau limbah padat yang tidak dapat didaur ulang atau diproses lebih lanjut. ",
+        "TPA adalah tempat terakhir dalam rantai pengelolaan sampah, di mana sampah ditimbun atau ditempatkan untuk mengurangi dampak lingkungan dan risiko kesehatan masyarakat.",
+        "Tempat Pemrosesan Akhir (TPA) merupakan tempat dimana sampah mencapai tahap terakhir dalam pengelolaannya sejak mulai timbul di sumber, pengumpulan, pemindahan/ pengangkutan, pengolahan dan pembuangan.",
+        "TPA merupakan tempat dimana sampah diisolasi secara aman agar tidak menimbulkan gangguan terhadap lingkungan sekitarnya. Karenanya diperlukan penyediaan fasilitas dan perlakuan yang benar agar keamanan tersebut dapat dicapai dengan baik"
+      ]
+    },
+    {
+      "tag": "dialog.tps",
+      "patterns": [
+        "Apa itu TPS",
+        "apa yang dimaksud TPS",
+        "TPS",
+        "pengertian TPS",
+        "jelaskan arti dari TPS"
+      ],
+      "responses": [
+        "TPS adalah tempat penampungan sampah sementara.",
+        "Sampah yang kita hasilkan biasanya kita buang ke tempat sampah dan kemudian kita bawa ke Tempat Penampungan Sementara (TPS). TPS yaitu tempat sebelum sampah diangkut ke tempat pendauran ulang, pengolahan, dan/atau tempat pengolahan sampah terpadu.",
+        "TPS adalah tempat penampungan sementara sampah sebelum diangkut ke TPA atau Tempat Pemrosesan Akhir.",
+        "TPS adalah suatu wadah yang keberadaannya untuk menampung sampah warga di sekelilingnya atau sekitarnya, baik itu lokasi dan kapasitasnya menyesuaikan dengan jumlah potensi sampah warganya."
+      ]
+    },
+    {
+      "tag": "dialog.tps3R",
+      "patterns": [
+        "Apa itu TPS 3R",
+        "apa yang dimaksud TPS 3R",
+        "TPS 3R",
+        "pengertian TPS 3R",
+        "jelaskan arti dari TPS"
+      ],
+      "responses": [
+        "TPS 3R adalah tempat pembungan sampah dengan konsep untuk mengurangi (reduce), menggunakan kembali (reuse) dan daur ulang (recaycle). TPS 3R berfungsi untuk melayani suatu kelompok masyarakat (termasuk di kawasan masyarakat berpenghasilan rendah) yang terdiri dari minimal 400 rumah atau kepala keluarga.",
+        "Penyelenggaraan Tempat Pengolahan Sampah Reduce-Reuse-Recycle (TPS3R) merupakan pola pendekatan pengelolaan persampahan pada skala komunal atau kawasan, dengan melibatkan peran aktif pemerintah dan masyarakat, melalui pendekatan pemberdayaan masyarakat.",
+        "Tempat Pengolahan Sampah 3R ( reduce, reuse, recycle) yang selanjutnya disebut TPS 3R adalah tempat dilaksanakannya kegiatan, pengumpulan, pemilahan, penggunaan ulang, dan pendauran ulang skala kawasan."
+      ]
+    },
+    {
+      "tag": "dialog.TPST",
+      "patterns": [
+        "Apa itu TPST",
+        "apa yang dimaksud TPST",
+        "TPST",
+        "pengertian TPST",
+        "jelaskan arti dari TPST"
+      ],
+      "responses": [
+        "TPST adalah sebuah tempat dilaksanakannya kegiatan pengumpulan, pemilahan, penggunaan ulang, pendauran ulang, pengolahan, dan pemrosesan akhir sampah.",
+        "Tempat Pengolahan Sampah Terpadu (TPST) adalah tempat dilaksanakannya kegiatan pengumpulan, pemilahan, penggunaan ulang, pendauran ulang, pengolahan, dan pemrosesan akhir sampah",
+        "TPST adalah singkatan dari Tempat Pemrosesan Sampah Terpadu.",
+        " TPST merupakan suatu fasilitas atau tempat yang dirancang untuk melakukan pemrosesan sampah secara terpadu dengan menggunakan berbagai metode pengelolaan sampah."
+      ]
+    },
+    {
+      "tag": "dialog.fungsitpa",
+      "patterns": [
+        "Apa itu fungsi TPA sampah",
+        "apa yang dimaksud fungsi TPA",
+        "fungsi TPA",
+        "pengertian fungsi TPA",
+        "jelaskan arti dari fungsi TPA",
+        "sebutkan fungsi TPA"
+      ],
+      "responses": [
+        "fungsi TPA merupakan tempat dimana sampah diisolasi secara aman agar tidak menimbulkan gangguan terhadap lingkungan sekitarnya. Karenanya diperlukan penyediaan fasilitas dan perlakuan yang benar agar keamanan tersebut dapat dicapai dengan baik.",
+        "Pelaksanaan pengumpulan dan pengangkutan sampah/residu skala regional dari sumber sampah, TPS, TPS3R, dan tempat pengolahan ke TPA dan/atau TPST Regional.",
+        "Pelaksanaan pengolahan sampah skala regional (pemadatan, pengomposan, daur ulang materi dan mengubah sampah menjadi sumber energi).",
+        "fungsi utama TPA adalah sebagai tempat untuk membuang sampah yang tidak dapat didaur ulang atau diproses lebih lanjut. Ini termasuk limbah-limbah yang bersifat non-degradabel dan sulit untuk diolah."
+      ]
+    },
+    {
+      "tag": "dialog.fungsitps3R",
+      "patterns": [
+        "Apa itu fungsi TPS 3R sampah",
+        "apa yang dimaksud fungsi TPS 3R",
+        "fungsi TPS 3R",
+        "pengertian fungsi TPS 3R",
+        "jelaskan arti dari fungsi TPS 3R",
+        "sebutkan fungsi TPS 3R"
+      ],
+      "responses": [
+        "Fungsi TPS 3R yaitu tempat pengumpulan sampah sebelum diangkut ke TPA dengan adanya sistem kinerja dalam pengurangan sampah dengan cara sampah diolah menjadi kompos atau dimanfaatkan kembali.",
+        "Program TPS3R bertujuan untuk mengurangi kuantitas dan/atau memperbaiki karakteristik sampah, yang akan diolah secara lebih lanjut di Tempat Pemrosesan Akhir (TPA) sampah dan berperan dalam menjamin terkelolanya sampah di perkotaan serta mengurangi kebutuhan lahan untuk penyediaan TPA. Dalam penyelenggaraannya, kegiatan ini menekankan pada pelibatan masyarakat dan pemerintah daerah, serta pembinaan dan pendampingan Pemerintah Daerah untuk keberlanjutan TPS3R. ",
+        "Fungsi TPS 3R sa diolah untuk mengurangi kuantitas atau memperbaiki karakteristik sampah, sehingga hanya residu sampah yang selanjutnya dikirim ke TPA. "
+      ]
+    },
+    {
+      "tag": "dialog.fungsitps",
+      "patterns": [
+        "Apa itu fungsi TPS sampah",
+        "apa yang dimaksud fungsi TPS",
+        "fungsi TPS",
+        "pengertian fungsi TPS",
+        "jelaskan arti dari fungsi TPS",
+        "sebutkan fungsi TPS"
+      ],
+      "responses": [
+        "Fungsi utama TPS adalah sebagai tempat pengumpulan sampah dari rumah-rumah, bisnis, atau lokasi lain di suatu wilayah. Ini adalah tempat awal di mana sampah dikumpulkan sebelum diangkut ke tempat pengelolaan lebih lanjut.",
+        "TPS berfungsi sebagai tempat sementara untuk menyimpan sampah sebelum diangkut oleh armada pengumpulan sampah ke lokasi pengolahan atau Tempat Pembuangan Akhir (TPA).",
+        "Beberapa TPS dapat melakukan pemisahan awal atau pengelompokan sampah berdasarkan jenisnya, seperti plastik, kertas, logam, dan organik. Hal ini dapat memfasilitasi proses daur ulang atau pengolahan lebih lanjut.",
+        "TPS berperan dalam mengelola sampah rumah tangga, yang mencakup berbagai jenis sampah dari aktivitas sehari-hari, seperti kemasan, kertas, dan limbah dapur."
+      ]
+    },
+
+    {
+      "tag": "dialog.jenisB3",
+      "patterns": [
+        "apa saja jenis-jenis sampah B3",
+        "jenis-jenis sampah b3",
+        "sebutkan jenis-jenis sampah B3"
+      ],
+      "responses": [
+        "1. Limbah B3 dari sumber tidak spesifik. Limbah ini tidak berasal dari proses utama, melainkan dari kegiatan pemeliharaan alat, inhibitor korosi, pelarutan kerak, pencucian, pengemasan dan lain-lain.",
+        "2. Limbah B3 dari sumber spesifik. Limbah ini berasal dari proses suatu industri (kegiatan utama).",
+        "3. Limbah B3 dari sumber lain. Limbah ini berasal dari sumber yang tidak diduga, misalnya prodak kedaluwarsa, sisa kemasan, tumpahan, dan buangan produk yang tidak memenuhi spesifikasi."
+      ]
+    },
+    {
+      "tag": "dialog.sifat&klasifikasiB3",
+      "patterns": [
+        "apa saja sifat dan klasifikasi sampah B3",
+        "sebutkan sifat dan klasifikasi sampah B3",
+        "sifat dan klasifikasi sampah B3",
+        "jelaskan sifat dan klasifikasi sampah B3"
+      ],
+      "responses": [
+        "1. Mudah meledak (explosive) : sampah mudah meledak adalah sampaah yang pada suhu dan tekanan standar dapat meledak karena dapat menghasilkan gas dengan suhu dan tekanan tinggi lewat reaksi fisika atau kimia sederhana. Sampah ini sangat berbahaya baik saat penanganannya, pengangkutan, hingga pembuangannya karena bisa menyebabkan ledakan besar tanpa diduga-duga. Adapun contoh Sampah B3 dengan sifat mudah meledak misalnya Sampah bahan eksplosif dan limbah laboratorium seperti asam prikat.",
+        "2. Pengoksidasi (oxidizing) :Limbah pengoksidasi adalah limbah yang dapat melepaskan panas karena teroksidasi sehingga menimbulkan api saat bereaksi dengan bahan lainnya. Limbah ini jika tidak ditangani dengan serius dapat menyebabkan kebakaran besar pada ekosistem. Contoh limbah b3 dengan sifat pengoksidasi misalnya kaporit.",
+        "3. Mudah menyala (flammable) : Limbah yang memiliki sifat mudah sekali menyala adalah limbah yang dapat terbakar karena kontak dengan udara, nyala api, air, atau bahan lainnya meski dalam suhu dan tekanan standar. Contoh limbah B3 yang mudah menyala misalnya pelarut benzena, pelarut toluena atau pelarut aseton yang berasal dari industri cat, tinta, pembersihan logam, dan laboratorium kimia.",
+        "4. Beracun (moderately toxic) : Limbah beracun adalah limbah yang memiliki atau mengandung zat yang bersifat racun bagi manusia atau hewan, sehingga menyebabkan keracunan, sakit, atau kematian baik melalui kontak pernafasan, kulit, maupun mulut. Contoh limbah b3 ini adalah limbah pertanian seperti buangan pestisida.",
+        "5. Berbahaya (harmful) Limbah berbahaya adalah limbah yang baik dalam fase padat, cair maupun gas yang dapat menyebabkan bahaya terhadap kesehatan sampai tingkat tertentu melalui kontak inhalasi ataupun oral.",
+        "6. Korosif (corrosive) : Limbah yang bersifat korosif adalah limbah yang memiliki ciri dapat menyebabkan iritasi pada kulit, menyebabkan pengkaratan pada baja, mempunyai pH ≥ 2 (bila bersifat asam) dan pH ≥ 12,5 (bila bersifat basa). Contoh limbah B3 dengan ciri korosif misalnya, sisa asam sulfat yang digunakan dalam industri baja, limbah asam dari baterai dan accu, serta limbah pembersih sodium hidroksida pada industri logam.",
+        "7. Bersifat iritasi (irritant) Limbah yang dapat menyebabkan iritasi adalah limbah yang menimbulkan sensitasi pada kulit, peradangan, maupun menyebabkan iritasi pernapasan, pusing, dan mengantuk bila terhirup. Contoh limbah ini adalah asam formiat yang dihasilkan dari industri karet.",
+        "8. Berbahaya bagi lingkungan (dangerous to the environment) : Limbah dengan karakteristik ini adalah limbah yang dapat menyebabkan kerusakan pada lingkungan dan ekosistem, misalnya limbah CFC atau Chlorofluorocarbon yang dihasilkan dari mesin pendingin",
+        "9. Karsinogenik (carcinogenic), Teratogenik (teratogenic), Mutagenik (mutagenic) : Limbah karsinogenik adalah limbah yang dapat menyebabkan timbulnya sel kanker, teratogenik adalah limbah yang mempengaruhi pembentukan embrio, sedangkan limbah mutagenik adalah limbah yang dapat menyebabkan perubahan kromosom."
+      ]
+    },
+    {
+      "tag": "dialog.karakteristikB3",
+      "patterns": [
+        "apa saja karakteristik sampah B3",
+        "sebutkan karakteristik sampah B3",
+        "karakteristik sampah B3 seperti apa",
+        "karakteristik sampah B3"
+      ],
+      "responses": [
+        "1. Mudah meledak, 2. Mudah terbakar, 3. Bersifat reaktif, 4. Infeksius, 5. Bersifat korosif, 6. Mengandung racun."
+      ]
+    },
+    {
+      "tag": "dialog.pengelolahansampahB3",
+      "patterns": [
+        "apa saja pengelolaan sampah B3",
+        "pengelolaan sampah B3",
+        "sebutkan cara mengelolah sampah B3",
+        "tips pengolahan sampah B3",
+        "cara mengolah sampah B3"
+      ],
+      "responses": [
+        "Penyimpanan, Pengumpulan, Pengangkutan, Pemanfaatan, Pengolahan, Penimbunan"
+      ]
+    },
+    {
+      "tag": "dialog.jenismedis",
+      "patterns": [
+        "Apa saja jenis sampah medis",
+        "sebutkan jenis sampah medis",
+        "jenis-jenis sampah medis",
+        "jenis sampah medis yang bagaimana"
+      ],
+      "responses": [
+        "Benda Tajam Sampah medis yang satu ini merupakan segala sesuatu yang sifatnya bisa menembus kulit. Biasanya berupa jarum, pisau bedah, kepingan pecahan kaca, ampul, staples ataupun kabel, dan banyak lagi."
+      ]
+    },
+    {
+      "tag": "dialog.penangananmedis",
+      "patterns": [
+        "Bagaimana cara menangani sampah medis",
+        "penanganan sampah medis",
+        "jelaskan cara mengolah sampah medis",
+        "tips menangani sampah medis",
+        "penanggulangan sampah medis"
+      ],
+      "responses": [
+        "Bagi sampah yang menjadi sampah dari penelitian di bidang kesehatan pada laboratorium merupakan sampah sitotoksis. Sebaiknya dikumpulkan pada wadah yang anti bocor dan dilabeli sitotoksik.",
+        "Pengelolaan limbah medis yaitu rangkaian kegiatan mencakup segregasi, pengumpulan, pengangkutan, penyimpanan, pengolahan dan penimbunan limbah medis"
+      ]
+    },
+    {
+      "tag": "dialog.pentingnyamenanganimedis",
+      "patterns": [
+        "apa penting menangani sampah medis",
+        "mengapa diperlukan penanganan pada sampah medis",
+        "apa diperlukan menangani sampah medis"
+      ],
+      "responses": [
+        "Limbah medis sangat penting untuk dikelola secara benar, hal ini mengingat limbah medis termasuk kedalam kategori limbah berbahaya dan beracun. Sebagian limbah medis termasuk kedalam kategori limbah berbahaya dan sebagian lagi termasuk kategori infeksius."
+      ]
+    },
+    {
+      "tag": "dialog.jenisampahijau",
+      "patterns": [
+        "Apa saja jenis sampah hijau",
+        "sebutkan jenis sampah hijau",
+        "jenis-jenis sampah hijau",
+        "jenis sampah hijau yang bagaimana"
+      ],
+      "responses": [
+        "Sisa Makanan:  Sisa-sisa sayuran dan buah yang sudah tidak terpakai, Kulit telur, sisa nasi, dan bahan makanan organik lainnya.",
+        "Rumput Potong: Sisa-sisa rumput setelah pemotongan halaman atau area hijau.",
+        "Dedaunan : Dedak-daunan yang jatuh dari pohon-pohon Daun kering yang terkumpul pada musim gugur.",
+        "Ranting dan Cabang: Sisa-sisa ranting dan cabang dari pemangkasan pohon atau pepohonan.",
+        "Bunga dan Tanaman yang Tidak Terpakai Lagi: Tanaman hias yang sudah mati atau tidak terpakai lagi.",
+        "Serpihan Kayu dan Serbuk Kayu: Sisa-sisa kayu dari proyek konstruksi atau pemotongan kayu.",
+        "Jerami dan Tumbuhan Lainnya : Jerami yang berasal dari pertanian atau tumbuhan lain yang sudah mati.",
+        "Serbuk Gergaji: Serbuk gergaji yang dihasilkan dari kegiatan penggergajian kayu.",
+        "Bahan Organik Lainnya : Kotoran hewan (seperti kotoran sapi atau kambing) jika digunakan dalam pengomposan, Bahan organik lainnya yang dapat terurai."
+      ]
+    },
+    {
+      "tag": "dialog.jenisampahresidu",
+      "patterns": [
+        "Apa saja jenis sampah sulit daur ulang",
+        "sebutkan jenis sampah sulit di daur ulang",
+        "jenis-jenis sampah sulit di daur ulang",
+        "jenis sampah sulit di daur ulang yang bagaimana"
+      ],
+      "responses": [
+        "Kotak kardus pizza :Pizza yang hangat dan lezat yang kamu nikmati akhir pekan kemarin, umumnya dikemas dalam kotak kardus. Sebenarnya, kotak kardus bisa didaur ulang, tapi kalau terdapat minyak atau sisa makanan, kotak kardus tersebut tidak bisa didaur ulang. Hal ini karena lemak atau minyak makanan bisa merusak peralatan daur ulang dan mencemari bahan lain di fasilitas pengolahan sampah. Kalau kotak kardus berminyak dan basah, cukup dikubur di dalam tanah.",
+        "Tutup botol : Hampir sebagian besar tutup botol yang terbuat dari plastik, biasanya tidak bisa didaur ulang. Contohnya tutup botol deterjen, tutup botol soda, tutup botol air minum, dan tutup botol serupa dari polipropilen.",
+        "Piring keramik : Mangkok, piring, nampan, atau wadah apapun yang dirancang untuk menahan suhu panas tinggi, umumnya sulit didaur ulang. Sebab, peralatan makan tersebut memiliki titik lebur yang lebih tinggi daripada kaca biasa. Untuk itu, beberapa fasilitas daur ulang sampah akan mengabaikan piring keramik atau piring oven. ",
+        "Wadah Styrofoam atau Polystyrene : Selanjutnya, wadah styrofoam seperti kemasan makanan, karton telur, cup mie instan, wadah kopi sekali pakai, dan lainnya, termasuk sampah yang tidak bisa di daur ulang. Lebih parahnya lagi, styrofoam adalah bahan yang tidak akan terurai oleh tanah. Itulah mengapa, banyak restoran dan pedagang makanan beralih dari kemasan styrofoam ke wadah ramah lingkungan. ",
+        "Sedotan Plastik : Sebenarnya, bukan hanya sedotan plastik saja yang termasuk sampah yang tidak bisa di daur ulang. Peralatan makan plastik seperti piring, sendok, garpu, dan pisau plastik juga tak bisa didaur ulang. Bahan plastik atau polystyrene menghabiskan biaya dan energi besar ketika didaur ulang. Jadi, sebelum membuang peralatan plastik atau sedotan plastik ke tempat sampah, kita bisa menggunakannya kembali untuk proyek prakarya atau kerajinan tangan di rumah.",
+        "Kaleng Aerosol : Meskipun kaleng aerosol terbuat dari logam, isinya yang bertekanan dapat merusak mesin daur ulang. Akibatnya, barang-barang ini tergolong sampah yang tidak bisa di daur ulang. Dikhawatirkan, jika terus menumpuk kaleng-kaleng yang tak bisa didaur ulang, maka timbunan sampah di TPA akan semakin banyak.",
+        "Jendela, Cermin, atau Kaca Pecah : Meskipun hampir semua toples dan wadah kaca dapat didaur ulang, tidak semua kaca dibuat sama. Biasanya, pihak fasilitas daur ulang tidak akan menerima beberapa jenis kaca, seperti kaca jendela, bola lampu pijar, lampu neon, gelas minum, kacamata, cermin, dan sebagainya. ",
+        "Buku Hardcover : Mungkin kamu beranggapan bahwa semua buku bisa didaur ulang. Namun, sampul buku hard cover yang kuat mengandung komponen non kertas. Maka itu, sebelum didaur ulang, sampul buku hardcover harus dibuang terlebih dulu. ",
+        "Tirai Plastik : Sebagian besar tirai plastik untuk kamar mandi dibuat dengan PVC (polivinil klorida). Bahan kimia yang dipakai dalam pembuatan PVC merupakan bahan yang sulit didaur ulang, bahkan tidak bisa diuraikan tanah. Akan tetapi, kita bisa mengurangi sampai tirai plastik kamar mandi dengan menggunakannya kembali. Misalnya, sebagai taplak meja, kain lap, pelapis laci, atau bahan kerajinan tangan.",
+        "Limbah Medis : Kamu mungkin bertanya, jarum suntik yang sudah dipakai akan dibuang kemana Biasanya, setiap fasilitas medis seperti rumah sakit atau klinik kesehatan telah memiliki tempat pembuangan limbah medis. Limbah medis dikategorikan sebagai biohazard yang berbahaya. Karena dapat menyebarkan beberapa jenis penyakit, bakteri, atau kontaminan lainnya. Selain itu, limbah medis termasuk sampah yang tidak bisa di daur ulang yang metode pembuangannya harus mematuhi hukum negara. ",
+        "TV dan Elektronik Bekas : Seiring perkembangan teknologi, banyak peralatan elektronik yang sudah tergolong kuno. Misalnya, TV tabung sinar katoda yang usang. Pembuangan sampah di Indonesia, umumnya masih berfokus pada pengolahan limbah rumah tangga. Namun, di beberapa negara maju seperti Amerika Serikat, ada banyak tempat pengolahan limbah peralatan elektronik, seperti TV tabung, kulkas, komputer, dan sebagainya. Kamu bisa menjual peralatan elektronik bekas secara murah, daripada hanya dibiarkan menumpuk di gudang. ",
+        "Obat Kadaluwarsa : Obat kadaluwarsa dari pabrik, biasanya tidak boleh diedarkan dan tidak boleh dikonsumsi oleh konsumen. Kandungan kimia yang telah kadaluwarsa dapat membahayakan kesehatan. Selain itu, obat kadaluwarsa atau limbah farmasi termasuk sampah yang tidak bisa didaur ulang. Jika sudah kadaluwarsa, cacat, atau terkontaminasi bahan kimia, limbah farmasi harus ditangani dengan baik. "
+      ]
+    },
+    {
+      "tag": "dialog.warnaTempatSampah",
+      "patterns": [
+        "Apa makna warna kotak sampah yang berbeda-beda",
+        "apa saja warna tempat sampah",
+        "jelaskan arti dari warna tempat sampah"
+      ],
+      "responses": [
+        "Warna Hijau : Warna tempat sampah hijau ini berisi sampah organik yang mudah terurai seperti sisa makanan, bahan baku, daun kering, dan kotoran hewan. Sampah organik harus diangkut dan dirawat secara teratur setiap beberapa hari, Warna Kuning : Warna tempat sampah kuning berisi limbah anorganik seperti kaleng, plastik, dan styrofoam. Sampah anorganik yang diolah dengan baik dapat menjadi produk daur ulang atau bahan kemasan lebih ramah lingkungan, Warna Biru : Tempat warna biru membantu menyimpan kertas bekas agar mudah didaur ulang. Kertas bekas biasanya diolah menjadi bubur kertas dan dicetak kembali menjadi kertas siap pakai, Warna Abu-abu : Warna tempat sampah ini memang jarang terlihat di tempat umum. Padahal, fungsinya sangat penting untuk menampung sampah dan kotoran seperti popok bayi bekas, pembalut bekas, bahkan permen karet, Warna Merah : Warna tempat sampah merah digunakan untuk membuang sampah berupa pecahan kaca, bahan kimia, komponen elektronik, bahan berbahaya dan zat beracun (B3). Limbah B3 memerlukan penanganan khusus yang tidak dapat disepelekan. "
+      ]
+    },
+    {
+      "tag": "dialog.membakarSampah",
+      "patterns": [
+        "Apakah ada dampak kesehatan dari membakar sampah atau limbah di tempat terbuka",
+        "apa akibat dari membakar sampah",
+        "efek dari membakar sampah bagi lingkungan apa "
+      ],
+      "responses": [
+        "Pembakaran sampah dapat menyebabkan kabut asap yang tebal dan mengurangi jarak pandang dan kenyamanan di lingkungan tempat tinggal. Yang lebih parah, bisa memicu terjadinya kebakaran dengan skala lebih besar.",
+        "Dampak membakar sampah di antaranya masalah pernapasan, infeksi mata, dan meningkatnya risiko penyakit serius, seperti gangguan kardiovaskular hingga kanker. Sejumlah solusi aman dalam mengelola sampah yaitu dengan menerapkan 3R (reduce, reuse, recycle), membuat kompos, dan membuang sampah dengan benar.",
+        "membakar sampah bisa memperparah tingkat polusi udara dan menimbulkan dampak risiko penyakit gangguan pernafasan. “Polutan hasil pembakaran apapun bentuknya sifatnya toksik jika masuk ke kantong paru-paru menghasilkan dampak ringan sampai berat."
+      ]
+    },
+    {
+      "tag": "dialog.Sampahsekalipakai",
+      "patterns": [
+        "Apa alternatif untuk produk plastik sekali pakai",
+        "produk sampah sekali pakai seperti apa"
+      ],
+      "responses": [
+        "Plastik sekali pakai akan memperbanyak sampah yang dihasilkan di kantin sekolah. Gantilah dengan alternatif yang bisa dipakai ulang atau yang bisa didaur ulang. Misalnya dengan menggunakan sedotan kertas, sendok dan garpu kayu, atau piring yang terbuat dari bahan yang bisa didaur ulang.",
+        "Sampah sekali pakai adalah barang atau produk yang dirancang untuk digunakan hanya sekali dan kemudian dibuang. Produk-produk ini umumnya tidak dirancang untuk dapat didaur ulang atau digunakan kembali. Sampah sekali pakai seringkali terbuat dari bahan-bahan yang sulit terurai dan dapat menyebabkan dampak lingkungan yang signifikan. ",
+        "Penggunaan plastik sekali pakai, yaitu plastik yang langsung dibuang setelah satu kali pemakaian, menimbulkan pertumbuhan sampah plastik secara eksponensial (tidak secara linier). Karena itu, jumlah sampah plastik terjadi semakin cepat dan semakin besar."
+      ]
+    },
+    {
+      "tag": "dialog.MetodePengolahanSampah",
+      "patterns": [
+        "Apa saja metode pengolahan sampah",
+        "metode pengolahan yang seperti apa",
+        "sebutkan metode pengolahan sampah"
+      ],
+      "responses": [
+        "Metode Open Dumping : Untuk metode pengolahan limbah yang satu ini adalah dengan melakukan penimbunan di suatu lahan terbuka tanpa adanya perlakuan atau pengelolaan khusus pada limbah.",
+        "Metode Penimbunan Terkendali : Metode kedua, adalah sebuah cara untuk pengelolaan open dumping yang sudah dibenahi dan lebih tersistem. Setidaknya sudah terdapat perbedaan antara limbah organik dengan limbah anorganik. Metode ini menggabungkan sistem open dumping dengan metode urug saniter.",
+        "Metode Urug Saniter : Metode yang terakhir ini adalah metode yang membiarkan sampai ditimbun dahulu lalu dipadatkan dan ditutupi dengan tanah yang menjadi penutupnya. Biasanya akan disediakan lubang galian untuk bisa memendam tanah di dasar tanah."
+      ]
+    },
+    {
+      "tag": "dialog.PanduanKompos",
+      "patterns": [
+        "Bagaimana cara membuat kompos dari sampah organik",
+        "Cara menggunakan kompos dari sampah organik",
+        "bagaimana pemakaian kompos",
+        "cara mengolah kompos"
+      ],
+      "responses": [
+        "Mengumpulkan Sampah, Proses Pencacahan, Proses Pendiaman, Tutup Rapat, Tunggu Sampai 2 Minggu"
+      ]
+    },
+
+    {
+      "tag": "dialog.FiturWeb",
+      "patterns": [
+        "apa saja fiturnya",
+        "fitur ",
+        "fitur apa yang dimiliki",
+        "apa saja yang bisa aku lakukan di website"
+      ],
+      "responses": ["fitur EduTrash ada 3 yaitu deteksi, edukasi dan chatbot"]
+    },
+    {
+      "tag": "dialog.FiturMobile",
+      "patterns": [
+        "fitur mobile apa saja yang terdapat di aplikasi ini",
+        "sebutkan fitur mobile yang kamu punya"
+      ],
+      "responses": ["Deteksi, Edukasi, Chatbot, pengetahuan-pengetahuan seputar sampah"]
+    },
+    {
+      "tag": "dialog.CaraKerjaAplikasi",
+
+      "patterns": [
+        "bagaimana cara kerja aplikasi ini",
+        "jelaskan cara kerja aplikasi ini"
+      ],
+      "responses": [
+        "bisa dilihat dibagian menu pengetahuan untuk informasi lebih lanjutnya"
+      ]
+    },
+    {
+      "tag": "dialog.BankSampah",
+      "patterns": [
+        "jenis sampah yang diterima bank sampah",
+        "sampah apa saja yang diterima di bank sampah"
+      ],
+      "responses": ["Kertas, Plastik, Logam, Kaca, Cup Gelas, Sampah Elektronik", "Sampah Galon", "Sampah Kardus", "Sampah Aluminium"]
+    },
+    {
+      "tag": "dialog.HargaSampah",
+      "patterns": ["berapa harga setiap sampah", "harga sampah berapa"],
+      "responses": [
+        "Bisa diihat lebih lanjutnya di website EcoGreen di menu pengetahuan yang di dalamnya terdapat harga sampah"
+      ]
+    },
+    {
+      "tag": "dialog.tempatMenjualSampah",
+      "patterns": [
+        "dimana aku bisa menjual sampah",
+        "tempat menjual sampah ada dimana",
+        "bagaimana caranya aku menjual sampah"
+      ],
+      "responses": [
+        "Bisa di liat di website EcoGreen di menu pengelola"
+      ]
+    },
+    {
+      "tag": "dialog.KerajinanSampah",
+      "patterns": [
+        "Cara membuat kerajinan dari sampah",
+        "bagaimana membuat produk yang berasal dari sampah"
+      ],
+      "responses": [
+        "Pot bunga dari botol bekas -> Botol plastik bekas dapat dimanfaatkan kembali sebagai pot bunga lucu bergambar hewan. Bahan-bahan yang dibutuhkan antara lain botol 2 liter dan pewarna atau cat. Ikuti langkah-langkah berikut untuk membuatnya : a. Potong sepertiga bagian bawah botol b. Pada salah satu sisi, potong botol menjadi dua bentuk segitiga sehingga terlihat seperti telinga c. Cat botol dengan warna yang diinginkan d. Gambar wajah hewan pada botol, misalnya wajah kucing atau anjing e. Isi botol dengan tanah dan tanaman yang ingin ditanam",
+        "Tempat pensil dari botol bekas -> Botol plastik juga bisa didaur ulang menjadi tempat pensil. Caranya yakni dengan memotong botol menjadi setengah bagian, kemudian hiaslah dengan cara diwarnai dan diberi glitter. Setelah selesai dihias, masukkan pensil atau bolpoin ke dalam potongan botol tersebut.",
+        "Seni mozaik dari tutup botol -> Ketika seseorang membuat kerajinan dari botol plastik bekas, bagian tutupnya jarang digunakan. Padahal, tutup botol bisa dijadikan seni mozaik yang mempercantik dekorasi rumah. Cara membuatnya yakni :  a. Kumpulkan tutup botol bekas sebanyak mungkin b. Siapkan kanvas atau karton, lem, dan cat. c. Cari gambar yang ingin dibuat sebagai dekorasi. d. Cat tutup botol sesuai gambar yang diinginkan. e. Buat gambar di atas kanvas atau karton menggunakan pensil. f. Letakkan tutup botol yang telah dicat di atas karton menggunakan lem. g. Jika sudah selesai, gantungkan seni mozaik pada dinding",
+        "Tikar dari kantong plastik -> Tikar merupakan anyaman yang biasanya dipakai sebagai alas duduk atau tidur. Ternyata, kantong plastik bekas dapat dibuat menjadi tikar dengan langkah-langkah berikut : a. Kumpulkan kantong plastik bekas sebanyak mungkin dan pilah sesuai warnanya. b. Siapkan gunjing, jarum, dan benang. c. Pikirkan pola tikar yang akan dibuat. d. Potong kantung pastik bekas menjadi strip panjang dengan lebar 5 cm. e. Buat simpul dan kepanglah strip dengan warna yang sama. f. Letakkan strip kantong plastik bekas yang telah dikepang dalam pola spiral. g. Gunakan jarum dan benang untuk menjahit anyaman kantong plastik dalam bentuk spiral"
+      ]
+    },
+    {
+      "tag": "dialog.IdeBisnisSampah",
+      "patterns": [
+        "ide bisnis sampah apa saja",
+        "apa yang dimaksud ide bisnis sampah sebutkan contohnya",
+        "pengertian ide bisnis sampah"
+      ],
+      "responses": [
+        "Ide bisnis sampah merujuk pada konsep usaha yang berfokus pada pengelolaan atau pemanfaatan sampah sebagai sumber daya. Bisnis semacam ini mencakup berbagai model usaha yang berusaha mengatasi masalah sampah sambil menciptakan nilai ekonomi. contohnya mendirikan bank sampah yang tidak hanya menerima sampah, tetapi juga mendorong kreativitas dengan memberikan insentif atau hadiah bagi warga yang menghasilkan karya seni dari sampah.",
+        "Sampah daur ulang sudah diketahui lama bisa menjadi peluang bisnis yang menjanjikan. Terutama untuk sampah plastik, bisa didaur ulang menjadi barang-barang yang bisa berguna dan berdaya jual lagi. Salah satu cara untuk mengolah sampah menjadi daur ulang ini dengan menerapkan bank sampah.",
+        "Ide bisnis yang bisa dibuat yaitu dengan membuka toko yang menjual barang-barang bekas atau second-hand untuk mengurangi limbah dan mendukung konsep penggunaan kembali."
+      ]
+    },
+    {
+      "tag": "dialog.ProdukRamahLingkungan",
+      "patterns": [
+        "Apa itu produk ramah lingkungan",
+        "apa yang dimaksud produk ramah lingkungan",
+        "pengertian produk ramah lingkungan",
+        "jelaskan arti dari produk ramah lingkungan"
+      ],
+      "responses": [
+        "Produk ramah lingkungan berarti produk yang dibuat tanpa memberikan dampak buruk bagi lingkungan karena pilihan bahan yang tidak berisiko buruk bagi lingkungan. Agar dikatakan sebagai produk ramah lingkungan, produk tersebut tidak menghasilkan karbon emisi dalam jumlah banyak.",
+        "produk ramah lingkungan adalah sebuah produk yang didesain dan atau memiliki kandungan bahan yang bisa di daur ulang dan mengurangi kerusakan lingkungan atau mengurangi pencemaran lingkungan dalam seluruh siklus hidup produk tersebut.",
+        "Produk ramah lingkungan merujuk pada produk atau barang yang diproduksi dan dikonsumsi dengan memperhatikan dampaknya terhadap lingkungan. Produk ini dirancang dan diproduksi dengan mempertimbangkan siklus hidupnya, mulai dari bahan baku hingga proses produksi, penggunaan, dan akhirnya pembuangan. Tujuannya adalah untuk mengurangi jejak lingkungan dan mendukung praktik-praktik berkelanjutan. "
+      ]
+    },
+    {
+      "tag": "dialog.ContohProdukRamahLingkungan",
+      "patterns": [
+        "Apa itu contoh produk ramah lingkungan",
+        "sebutkan contoh produk ramah lingkungan",
+        "apa saja produk ramah lingkungan"
+      ],
+      "responses": [
+        "Kendaraan Listrik, Panel Surya, Lampu Hemat Energi, Produk Ramah Lingkungan, Sistem Pengumpulan dan Pengolahan Sampah, Produk Daur Ulang.",
+        "Air dan Perlengkapan Mandi Ramah Lingkungan, Produk Penghemat Air,  Pakaian Ramah Lingkungan, Produk Pertanian Organik.",
+        "Sedotan Re-useable,  Wadah Tempat Makan bebas BPA, Pembalut dari Kain, Tas Belanja Lipat, Loofah atau Gambas Kering, Pencuci Piring dari Sabut Kelapa, Tumbler, Sabun dan Shampo Bebas Karbon, Set Alat Makan"
+      ]
+    },
+    {
+      "tag": "dialog.ProgramPemerintah",
+      "patterns": [
+        "apa saja program pemerintah yang berkaitan dengan sampah",
+        "program pemerintah tentang sampah",
+        "program tentang sampah yang dibuat oleh pemerintah",
+        "sebutkan program pemerintah yang berkaitan dengan sampah"
+      ],
+      "responses": [
+        "Pemanfaatan sampah untuk energi termasuk salah satu Program Prioritas Nasional. Melalui pencanangan di 12 kota untuk pembangunan Pengolahan Sampah menjadi Energi Listrik/PSEL diharapkan dapat berkelanjutan dan menyelesaikan permasalahan sampah",
+        "Mendirikan bank sampah sebagai tempat pengumpulan dan pemilahan sampah yang melibatkan masyarakat. Bank sampah dapat memberikan insentif atau penghargaan bagi masyarakat yang berpartisipasi.",
+        "Kebijakan dan program untuk mengurangi penggunaan plastik sekali pakai, seperti larangan kantong plastik, kampanye anti-plastik, dan promosi penggunaan kemasan yang dapat didaur ulang.",
+        "Program pemerintah yaitu seperti kolaborasi dengan sektor swasta untuk mendukung inovasi dalam pengelolaan sampah, seperti pengembangan teknologi daur ulang, pengurangan plastik sekali pakai, dan proyek-proyek berkelanjutan lainnya."
+      ]
+    },
+    {
+      "tag": "dialog.KebijakanPemerintah",
+      "patterns": [
+        "apa saja kebijakan pemerintah yang berkaitan dengan sampah",
+        "kebijakan pemerintah tentang sampah",
+        "kebijakan tentang sampah yang dibuat oleh pemerintah",
+        "sebutkan kebijakan pemerintah yang berkaitan dengan sampah"
+      ],
+      "responses": [
+        "Pemerintah sepertinya mulai serius menangani sampah. Melalui Peraturan Presiden (Perpres) No.97 tahun 2017 tentang Kebijakan dan Strategi Nasional Pengelolaan Sampah Rumah Tangga dan Sampah Sejenis Sampah Rumah Tangga, pemerintah menetapkan kebijakan dan strategi pengelolaan sampah nasional (Jakstranas). Lewat kebijakan yang diterbitkan 23 Oktober 2017 itu pemerintah menargetkan bisa mengurangi sampah sebesar 30% di tahun 2025 dan dapat menangani tumpukan sampah sebelum ada kebijakan ini sebesar 70% pada 2025. Maklum, data Kementerian Lingkungan Hidup dan Kehutanan (LHK) menyebut, sektor rumah tangga merupakan penyumbang sampah terbesar yakni sekitar 48%, disusul pasar tradisional sebesar 24%, dan jalan 7%.",
+        "Dalam Perpres tersebut, Pemerintah menetapkan target pengelolaan sampah yang ingin dicapai adalah 100% sampah terkelola dengan baik dan benar pada tahun 2025 (Indonesia Bersih Sampah). Target ini diukur melalui pengurangan sampah sebesar 30%, dan penanganan sampah sebesar 70%.",
+        "Peraturan Pemerintah Republik Indonesia Nomor 81 Tahun 2012 mengatur tentang pengelolaan sampah yaitu Menetapkan : PERATURAN PEMERINTAH TENTANG PENGELOLAAN SAMPAH RUMAH TANGGA DAN SAMPAH SEJENIS SAMPAH RUMAH TANGGA. Pasal 1 Dalam Peraturan Pemerintah ini yang dimaksud dengan: 1. Sampah rumah tangga adalah sampah yang berasal dari kegiatan sehari-hari dalam rumah tangga yang tidak termasuk tinja dan sampah spesifik.",
+        "Dengan telah ditetapkannya Peraturan Pemerintah (PP) nomor 27 Tahun 2020 tentang Pengelolaan Sampah Spesifik pada tanggal 8 Juni 2020, maka regulasi pengelolaan sampah di Indonesia seperti yang diamanatkan dalam UU nomor 18 Tahun 2008 Tentang Pengelolaan Sampah sudah lengkap."
+      ]
+    },
+    {
+      "tag": "dialog.ZeroWaste",
+      "patterns": [
+        "apa yang dimaksud zero waste",
+        "zero waste itu yang bagaimana",
+        "apa sih zero waste itu",
+        "zero waste adalah",
+        "jelaskan arti dari zero waste",
+        "pengertian zero waste",
+        "jelaskan apa yang dimaksud dengan zero waste"
+      ],
+      "responses": [
+        "Zero Waste adalah Gaya hidup modern mendorong manusia untuk terus menerus membutuhkan banyak barang. Kita tidak sadar jika membeli barang sama aja menghasilkan sampah, apalagi barang sekali pakai. Aktivitas manusia semakin beragam setiap harinya dan semakin banyak juga barang dan produk yang dibeli, sehingga, sampah yang dihasilkan sudah melebihi dari kemampuan alam untuk menyerapnya.",
+        "Zero waste adalah filosofi yang dijadikan sebagai gaya hidup demi mendorong kita untuk bijak dalam mengkonsumsi dan memakismalkan siklus hidup sumber daya sehingga produk-produk bisa digunakan kembali. Zero waste juga soal menjauhi single use plastic atau plastik yang hanya digunakan sekali.",
+        "Zero Waste adalah prinsip yang berfokus pada pencegahan sampah yang mendorong penggunaan kembali semua produk. Dalam sistem zero waste, semua material dipakai ulang sampai maksimal. Tujuannya agar kita mengurangi kiriman sampah ke tempat pembuangan sampah, insinerator, atau laut.",
+        "zero waste adalah konservasi semua sumber daya dengan cara produksi, konsumsi, penggunaan kembali secara bertanggung jawab dan pemulihan semua produk, kemasan, dan bahan tanpa membakarnya, tanpa dibuang ke tanah, air, atau udara yang mengancam lingkungan atau kesehatan manusia."
+      ]
+    },
+    {
+      "tag": "dialog.EdukasiSampah",
+      "patterns": [
+        "Bagaimana program edukasi sampah dapat membantu meningkatkan kesadaran masyarakat terhadap pentingnya pengelolaan sampah yang berkelanjutan",
+        "Apa strategi terbaik untuk mendesain program edukasi sampah yang dapat mencakup seluruh lapisan masyarakat, dari anak-anak hingga orang dewasa",
+        "Apa saja inovasi terkini dalam pendekatan edukasi sampah yang dapat meningkatkan partisipasi dan pemahaman masyarakat"
+      ],
+      "responses": [
+        "Edukasi dapat menyajikan informasi tentang siklus hidup sampah, mulai dari produksi hingga pembuangan, dan mengajarkan konsep daur ulang. Ini membantu masyarakat memahami bagaimana keputusan konsumsi mereka dapat memengaruhi seluruh siklus hidup sampah.",
+        "Edukasi pengelolaan sampah berkelanjutan terus dijalankan demi kelestarian bumi. Anak-anak usia dini dan generasi muda mendapatkan edukasi baik di masyarakat maupun sekolah agar dapat mengelola sampah secara baik dimulai dari lingkungan sekitar, khususnya untuk mengatasi sampah plastik.",
+        "Beberapa inovasi terkini dalam pendekatan edukasi sampah yang dapat meningkatkan partisipasi dan pemahaman masyarakat melibatkan pemanfaatan teknologi, kreativitas, dan strategi berbasis komunitas."
+      ]
+    },
+    {
+      "tag": "dialog.BeritaSampah",
+      "patterns": [
+        "Ada berita apa hari ini, bot",
+        "apa permasalahan di dalam pengelolaan sampah saat ini di Indonesia"
+      ],
+      "responses": [
+        "Saya fokus pada informasi seputar pengelolaan sampah, tetapi jika ada yang ingin Anda ketahui dalam konteks itu, silakan tanyakan!",
+        "Permasalahan pengelolaan sampah yang ada di Indonesia dapat dilihat dari beberapa faktor yaitu tingginya jumlah sampah yang dihasilkan, tingkat pengelolaan pelayanan masih rendah, TPA yang terbatas jumlahnya, institusi pengelola sampah dan masalah biaya."
+      ]
+    },
+    {
+      "tag": "dialog.MengatasiSampahBerbahaya",
+      "patterns": [
+        "bagaimana cara mengatasi sampah berbahaya",
+        "cara penanganan sampah berbahaya",
+        "sampah berbahaya bagaimana mengatasinya",
+        "penanganan sampah berbahaya"
+      ],
+      "responses": [
+        "Proses pengolahan Limbah Bahan Berbahaya dan Beracun (B3)  dapat dilakukan secara kimia, fisik, atau biologi. Proses pengolahan limbah B3 secara kimia atau fisik yang umumnya dilakukan adalah stabilisasi/ solidifikasi . stabilisasi/solidifikasi adalah proses pengubahan bentuk fisik dan sifat kimia dengan menambahkan bahan peningkat atau senyawa pereaksi tertentu untuk memperkecil atau membatasi pelarutan, pergerakan, atau penyebaran daya racun limbah, sebelum dibuang. Contoh bahan yang dapat digunakan untuk proses stabilisasi/solidifikasi adalah semen, kapur (CaOH2), dan bahan termoplastik.",
+        "Upaya pengurangan Limbah B3 dapat dilakukan melalui 1) substitusi bahan, 2) modifikasi proses, dan/atau 3) penggunaan teknologi yang ramah lingkungan.",
+        "Untuk mengatasi  Limbah Bahan Berbahaya dan Beracun (B3) yaitu dengan melakukan tahapan pengelolaan Limbah B3 dari Reduksi, Pengemasan, Penyimpanan, Pengumpulan, Pengangkutan, Pemanfaatan, dan Penimbunan.",
+        "Reduksi limbah dengan mengoptimalkan penyimpanan bahan baku dalam proses kegiatan atau house keeping, substitusi bahan, modifikasi proses, maupun upaya reduksi lainnya serta Kegiatan pengemasan dilakukan dengan penyimbolan dan pelabelan yang menunjukkan karakteristik dan jenis limbah B3 berdasarkan acuan Keputusan Kepala Badan Pengendalian Dampak Lingkungan Nomor : Kep-05/Bapedal/09/1995."
+      ]
+    },
+
+    {
+      "tag": "dialog.SampahDapatDijual",
+      "patterns": [
+        "apa saja sampah yang dapat dijual",
+        "sampah yang dapat dijual",
+        "sampah yang memiliki harga",
+        "sebutkan sampah yang dapat dijual"
+      ],
+      "responses": [
+        "sampah plastik, logam, botol , kertas , elektronik ,Pakaian Bekas, Karet dan Ban Bekas, dan Kaca"
+      ]
+    },
+    {
+      "tag": "dialog.LamaWaktuSampahTerurai",
+      "patterns": [
+        "berapa lama waktu sampah terurai",
+        "berapa lama proses penguraian sampah",
+        "berapa lama waktu yang dibutuhkan agar sampah bisa terurai"
+      ],
+      "responses": [
+        "Waktu yang diperlukan untuk sampah terurai bervariasi tergantung pada jenis sampahnya dan kondisi lingkungan tempat sampah tersebut berada."
+      ]
+    },
+    {
+      "tag": "dialog.LamaWaktuSampahOrganikTerurai",
+      "patterns": [
+        "berapa lama waktu sampah organik terurai",
+        "berapa lama proses penguraian sampah organik",
+        "berapa lama waktu yang dibutuhkan agar sampah organik bisa terurai"
+      ],
+      "responses": [
+        "Rata-rata, sisa makanan membutuhkan waktu 1-6 bulan untuk bisa terurai. Kulit pisang misalnya, butuh waktu sekitar 1 bulan, sedangkan kulit jeruk butuh 6 bulan. Meskipun tidak selama kulit pisang atau jeruk, sisa buah apel membutuhkan waktu sekitar 2 bulan untuk bisa terurai.",
+        "Sampah organik seperti sisa makanan dan daun kering biasanya membutuhkan waktu sekitar 2-4 minggu untuk terurai secara alami. Sampah organik akan terurai dengan cepat jika ditempatkan di tempat yang cukup lembap, memiliki akses udara yang cukup, dan memiliki suhu yang cukup tinggi.",
+        "Sampah organik mampu diuraikan oleh mikroorganisme dalam waktu yang lebih singkat dibanding dengan sampah yang lain. Dikarenakan waktu penguraian yang berbeda, maka sebaiknya sampah diolah untuk menjadi barang yang lebih bermanfaat. Misalnya, sampah organik dapat diolah menjadi kompos."
+      ]
+    },
+
+    {
+      "tag": "dialog.LamaWaktuSampahNonOrganikTerurai",
+      "patterns": [
+        "berapa lama waktu sampah non organik terurai",
+        "berapa lama proses penguraian sampah non organik",
+        "berapa lama waktu yang dibutuhkan agar sampah non organik bisa terurai"
+      ],
+      "responses": [
+        "Agar alam bisa menguraikan atau menghancurkan sampah anorganik diperlukan waktu yang lama, coba lihat data di bawah ini: plastik diperlukan waktu 50 - 100 tahun untuk terurai. puntung rokok 10 tahun. kaleng soft drink (alumunium) 80 - 100 tahun.",
+        "Sampah plastik adalah jenis sampah anorganik, sampah jenis ini tidak dapat diuraikan begitu saja butuh waktu bertahun–tahun untuk dapat diuraikan. Plastik mempunyai atom-atom terikat yang rumit sehingga bakteri cukup kesulitan untuk mengurainya.",
+        "Waktu yang dibutuhkan untuk sampah non-organik terurai sangat bervariasi tergantung pada jenis bahan non-organik tersebut. Beberapa material non-organik dapat memakan waktu sangat lama atau bahkan tidak dapat terurai sama sekali dalam waktu manusia yang dapat diukur."
+      ]
+    },
+
+    {
+      "tag": "dialog.BerpartisipasiProgramBankSampah",
+      "patterns": [
+        "bagaimana cara agar bisa berpartisipasi di program bank sampah",
+        "cara berpartisipasi mengikuti program bank sampah"
+      ],
+      "responses": [
+        "Cari kelompok atau komunitas yang berfokus pada lingkungan di wilayah Anda. Bergabunglah dengan kelompok ini untuk berkolaborasi dalam kegiatan lingkungan dan proyek pengelolaan sampah.",
+        "Telusuri program-program pengelolaan sampah yang sudah ada di wilayah Anda. Ini bisa melibatkan program daur ulang, pembersihan lingkungan, atau kampanye pengurangan sampah.",
+        "Kontak atau kunjungi kantor pemerintah setempat untuk mengetahui program-program pengelolaan sampah yang sedang berjalan. Tanyakan apakah ada program-program partisipatif yang memerlukan bantuan atau kontribusi dari masyarakat."
+      ]
+    },
+    {
+      "tag": "dialog.SampahRumahTangga",
+      "patterns": [
+        "Apa itu sampah rumah tangga",
+        "apa yang dimaksud sampah rumah tangga",
+        "pengertian sampah rumah tangga",
+        "jelaskan arti dari sampah rumah tangga"
+      ],
+      "responses": [
+        "Sampah rumah tangga, yaitu sampah yang berasal dari kegiatan sehari-hari dalam rumah tangga, tidak termasuk tinja dan sampah spesifik.s",
+        "Sampah rumah tangga mengacu pada jenis sampah yang dihasilkan oleh individu atau keluarga di dalam rumah mereka. Sampah rumah tangga mencakup berbagai jenis limbah yang dihasilkan dari kegiatan sehari-hari dalam rumah, termasuk kegiatan memasak, membersihkan, berbelanja, dan menggunakan barang-barang konsumen.",
+        "sampah rumah tangga sebagai sampah yang berasal dari kegiatan sehari-hari dalam rumah tangga yang tidak termasuk tinja dan sampah spesifik."
+      ]
+    },
+    {
+      "tag": "dialog.ContohSampahRumahtangga",
+      "patterns": [
+        "Apa itu contoh sampah rumah tangga",
+        "sebutkan contoh sampah rumah tangga",
+        "apa saja sampah rumah tangga"
+      ],
+      "responses": [
+        "Sampah rumah tangga sebagian besar merupakan bahan organik. Termasuk sampah organik, misalnya sampah dari dapur, sisa-sisa makanan, pembungkus (selain kertas, karet dan plastik), tepung, sayuran, kulit buah, daun dan ranting.",
+        "Sampah rumah tangga merupakan sampah cair hasil buangan dari perumahan (rumah tangga), bangunan perdagangan, perkantoran dan sarana sejenis. Contohnya adalah air deterjen sisa cucian, air sabun, dan air tinja.",
+        "Contoh sampah rumah tangga seperti air sisa mencuci pakaian, air sisa mencuci piring, asap, sampah sisa makanan, sampah sayuran dan sampah plastik."
+      ]
+    },
+    {
+      "tag": "dialog.KomunitasPeduliLingkungan",
+      "patterns": [
+        "sebutkan komunitas peduli lingkungan di Indonesia",
+        "apa saja komunitas peduli lingkungan yang ada di Indonesia",
+        "daftar komunitas peduli lingkungan yang ada di Indonesia"
+      ],
+      "responses": [
+        "Greenpeace Indonesia, Lindungi Hutan, Zero Waste Indonesia, World Wildlife Fund (WWF) Indonesia, Youth for Climate Change (YFCC) Indonesia."
+      ]
+    },
+
+    {
+      "tag": "dialog.PerananKomunitasPeduliLingkungan",
+      "patterns": [
+        "sebutkan peranan komunitas peduli lingkungan",
+        "apa saja peranan komunitas peduli lingkungan",
+        "peran komunitas peduli lingkungan"
+      ],
+      "responses": [
+        "Mengajak masyarakat bersih-bersih, menanam pohon, kampanye mencintai lingkungan, dan jual beli dengan minim plastik termasuk ke upaya yang dilakukan komunitas dalam pembangunan berkelanjutan, loh!",
+        "Komunitas Peduli Lingkungan merujuk pada penggunaan makna bagi kelompok-kelompok tertentu. Kelompok tersebut senantiasa merasa antusias dan memiliki kepedulian terhadap isu-isu lingkungan di sekitar. Mereka memiliki kesadaran yang sama untuk menjaga, melindungi, dan merawat alam agar tetap sehat atau terhindar dari kerusakan.",
+        "Komunitas peduli lingkungan dapat memainkan peran kunci dalam penanaman kesadaran di kalangan masyarakat tentang dampak aktivitas manusia terhadap lingkungan dan cara-cara untuk mengurangi jejak lingkungan."
+      ]
+    },
+
+    {
+      "tag": "dialog.KemasanRamahLingkungan",
+      "patterns": [
+        "Apa itu kemasan ramah lingkungan",
+        "apa yang dimaksud kemasan ramah lingkungan",
+        "pengertian kemasan ramah lingkungan",
+        "jelaskan arti dari kemasan ramah lingkungan"
+      ],
+      "responses": [
+        "kemasan yang ramah lingkungan adalah enviromentally friendly. Kemasan yang langsung bersentuhan dengan produk disebut kemasan primer. Kemasan primer adalah kemasan yang berhubungan dengan kontak langsung dengan produk.",
+        "Kemasan ramah lingkungan atau Eco-friendly packaging adalah kemasan yang menggunakan bahan mudah terurai atau bisa didaur ulang, bisa dipakai ulang, serta tidak berbahaya bagi lingkungan maupun manusia.",
+        "kemasan yang ramah lingkungan adalah wadah suatu produk yang dirancang agar tidak memiliki dampak buruk bagi lingkungan baik dari segi bentuk, sampai bahan dasar pembuatan. Dengan menggunakan kemasan yang ramah lingkungan ini dapat membantu mengurangi potensi polusi.",
+        "Secara umum, kemasan yang ramah lingkungan atau yang biasa disebut dengan istilah eco-friendly adalah wadah yang dibuat menggunakan bahan-bahan yang mudah terurai tanah, bisa didaur ulang, dan tidak berbahaya bagi lingkungan serta manusia."
+      ]
+    },
+
+    {
+      "tag": "dialog.ContohKemasanRamahLingkungan",
+      "patterns": [
+        "apa saja contoh kemasan yang ramah lingkungan",
+        "sebutkan contoh kemasan ramah lingkungan",
+        "contoh kemasan ramah lingkungan yang seperti apa."
+      ],
+      "responses": [
+        "Paper Bag atau Tas Kertas , Kardus , Tas Kanvas , Food Container , dan Biofoam.",
+        "Tas Reusable,  Daun untuk Makanan, Bambu, Tas Anyaman, Kemasan dari Kulit Jagung.",
+        "Cassava Bag, Kardus Atau Boks, Kertas untuk Kemasan Ringan, Kain Atau Pouch."
+      ]
+    },
+
+    {
+      "tag": "dialog.ContohProdukRamahLingkungan",
+      "patterns": [
+        "apa saja contoh produk yang ramah lingkungan",
+        "sebutkan contoh produk ramah lingkungan",
+        "contoh produk ramah lingkungan yang seperti apa."
+      ],
+      "responses": [
+        "Pembalut Ramah Lingkungan, Kemasan Ramah Lingkungan, Sedotan Stainless Steel, Tas Belanja Kain, dan Produk Pembersih Ramah Lingkungan.",
+        "Air Minum Dalam Kemasan Ramah Lingkungan, Produk Perawatan Kulit Ramah Lingkungan, Perlengkapan Makan Daur Ulang, Sikat Gigi Bambu, Lampu LED Hemat Energi.",
+        "Botol Minum Stainless Steel, Keranjang Belanja Ramah Lingkungan, Produk Taman Ramah Lingkungan, Penggantian Produk Single-Use dengan Produk Ramah Lingkungan,Mainan Anak Ramah Lingkungan."
+      ]
+    },
+
+    {
+      "tag": "dialog.PeranPendidikanSampah",
+      "patterns": [
+        "peran lembaga pendidikan dalam menanggulangi sampah",
+        "peran pendidikan dalam mengatasi masalah sampah",
+        "pendidikan memiliki peran penting di dalam menangani masalah sampah"
+      ],
+      "responses": [
+        "Saatnya lembaga pendidikan merumuskan program penanganan sampah dan menjadikan peserta didik kita sebagai agen dan duta sampah bagi dirinya sendiri, keluarga, dan masyarakat. Dengan demikian, upaya penanganan sampah menjadi lebih mudah dan efeknya akan lebih terasa luas.",
+        "Pendidikan memainkan peran kunci dalam pengelolaan sampah karena dapat membentuk pemahaman, sikap, dan perilaku masyarakat terhadap sampah.",
+        "Pendidikan dapat mengajarkan prinsip Reduce, Reuse, Recycle (3R) kepada masyarakat. Membantu individu memahami pentingnya mengurangi konsumsi, menggunakan kembali barang-barang, dan mendaur ulang untuk mengurangi jumlah sampah."
+      ]
+    },
+
+    {
+      "tag": "dialog.KondisiSampahDiIndonesia",
+      "patterns": [
+        "bagaimana kondisi sampah di Indonesia",
+        "bagaimana kondisi sampah yang ada di Indonesia saat ini",
+        "kondisi sampah di Indoesia bagaimana "
+      ],
+      "responses": [
+        "Sayangnya, sejauh ini, kondisi sampah yang dikelola baik dalam kegiatan pengurangan maupun penanganan sampah masih belum maksimal",
+        "Pengelolaan sampah masih menjadi tantangan di beberapa daerah. Pemerintah terus berupaya meningkatkan infrastruktur pengelolaan sampah, termasuk pengembangan fasilitas daur ulang dan peningkatan program pengelolaan sampah.",
+        "Beberapa inovasi dan teknologi dalam pengelolaan sampah, seperti aplikasi untuk pemantauan sampah dan penggunaan teknologi daur ulang, sedang dikembangkan dan diuji coba."
+      ]
+    },
+    {
+      "tag": "dialog.PeranIbuRumahTanggaMengatasiSampah",
+      "patterns": [
+        "apa peran ibu rumah tangga di dalam mengatasi masalah sampah",
+        "peranan ibu rumah tangga untuk mengatasi sampah",
+        "apa yang bisa dilakukan ibu rumah tangga untuk mengatasi sampah"
+      ],
+      "responses": [
+        "Peran para ibu rumah tangga menjadi salah satu faktor yang dapat mendorong keberhasilan penanganan masalah sampah plastik tersebut. Salah satunya dengan merubah perilaku dari penggunaan katong plastik single use pada saat berbelanja, dengan penggunaan keranjang belanja yang dapat dipakai berulang kali.",
+        "Peran ibu rumah tangga sangat penting dalam mengatasi masalah sampah karena mereka merupakan pihak yang berada di garis depan dalam mengelola sampah di tingkat rumah tangga.",
+        "Ibu rumah tangga dapat memainkan peran penting dalam pengelolaan sampah sehari-hari di rumah. Ini mencakup pemilahan sampah, mendaur ulang bahan yang dapat didaur ulang, dan meminimalkan pemborosan.",
+        "Melibatkan diri dalam pengelolaan sampah di tingkat komunitas, seperti program daur ulang komunitas, pengumpulan sampah bersama, dan kampanye pengurangan sampah plastik.",
+        "Komunitas peduli lingkungan dapat memainkan peran dalam melindungi dan memelihara area alam lokal, seperti taman kota, hutan, atau sungai. Ini dapat melibatkan kegiatan seperti penanaman pohon, pemantauan keberlanjutan, dan pelestarian habitat lokal."
+      ]
+    },
+    {
+      "tag": "dialog.MengajakMasyarakat",
+      "patterns": [
+        "Bagaimana cara untuk mengajak masyarakat peduli terhadap keseimbangan lingkungan",
+        "bagaimana mengajak masyarakat untuk mengurangi sampah",
+        "Bagaimana kita membentuk masyarakat agar peduli terhadap lingkungan."
+      ],
+      "responses": [
+        "Tidak Membuang Sampah di Sungai, Tidak membakar sampah, Menghemat Energi, Menggunakan Produk Daur Ulang, Menanam Pohon,  Melarang Perburuan Liar.",
+        "Sosialisasikan informasi tentang dampak negatif sampah terhadap lingkungan, kesehatan, dan keberlanjutan. Berikan penjelasan tentang konsep 3R (Reduce, Reuse, Recycle) dan bagaimana menerapkannya dalam kehidupan sehari-hari.",
+        "Ajak masyarakat untuk berpartisipasi dalam kegiatan pembersihan lingkungan dan pengelolaan sampah. Bentuk kelompok atau komunitas peduli lingkungan untuk meningkatkan rasa tanggung jawab bersama.",
+        "Bangun fasilitas daur ulang yang mudah diakses oleh masyarakat. Gelar kampanye untuk memastikan bahwa masyarakat memahami proses pengelolaan sampah yang benar."
+      ]
+    },
+
+    {
+      "tag": "dialog.BahayaMenumpukSampah",
+      "patterns": ["apa bahaya sampah yang menumpuk", "bahaya tumpukan sampah"],
+      "responses": [
+        "Selain merusak lingkungan kita, pencemaran akibat sampah yang tidak dikelola dengan baik dapat memberikan dampak buruk bagi kesehatan kita dengan timbulnya berbagai penyakit. Pencemaran lingkungan tak hanya berdampak bagi manusia, tetapi juga makhluk hidup lainnya seperti hewan dan tumbuhan.",
+        "Dampaknya akan merusak pemandangan, mendatangkan bau yang tidak sedap, mendatangkan banjir level rendah sampai yang tinggi, mendatangkan berbagai penyakit dan dapat mencemari lingkungan."
+      ]
+    },
+
+    {
+      "tag": "dialog.FasilitasDaurUlang",
+      "patterns": [
+        "apa maksud dari fasilitas daur",
+        "fasilitas daur ulang",
+        "sebutkan fasilitas daur ulang"
+      ],
+      "responses": [
+        "Fasilitas Pusat Daur Ulang (PDU) merupakan sarana pengelolaan sampah yang dikembangkan dalam upaya peningkatan penanganan sampah organik dan anorganik di sumber serta pengurangan jumlah sampah yang harus ditangani di TPA.",
+        "Fasilitas daur ulang adalah tempat atau sistem yang didesain untuk mengumpulkan, memproses, dan mengolah limbah agar dapat digunakan kembali atau diubah menjadi produk baru.",
+        ""
+      ]
+    },
+    {
+      "tag": "dialog.PengangkutanSampah",
+      "patterns": [
+        "pengertian pengangkutan sampah",
+        "apa yang dimaksud dengan pengangkutan sampah"
+      ],
+      "responses": [
+        "Pengangkutan sampah adalah bagian persampahan yang bersasaran membawa sampah dari lokasi pemindahan atau dari sumber sampah secara langsung menuju tempat pemerosesan akhir (TPA).",
+        "ni merupakan proses penanganan sampah dengan cara mengumpulkan dari masing-masing sumber sampah untuk diangkut (1) ke tempat penampungan sementara (TPS) sampah atau (2) pengolahan sampah antara (SPA atau ITF), atau (3) langsung ke tempat pemrosesan akhir (TPST) tanpa melalui proses pemindahan."
+      ]
+    },
+    {
+      "tag": "dialog.PenangananSampahNegaraMaju",
+      "patterns": [
+        "bagaimana penanganan sampah di negara maju",
+        "apakah ada perbedaan di negara maju dalam mengatasi masalah sampah"
+      ],
+      "responses": [
+        "beberapa negara seperti Korea Selatan, Jepang, Jerman, dan Swedia, sudah menerapkannya dalam sistem pengolahan sampah nasional mereka. Hasilnya, Swedia menjadi negara kedua terbaik dalam ‘waste recovery’ versi riset dari pemasok kemasan RAJA Pack Inggris. Jerman disebut sebagai negara dengan pengolahan dan daur ulang terbaik di dunia versi Sustainability Mag, sedangkan Korea Selatan ada di urutan ketiga.",
+        "Ya, terdapat perbedaan dalam cara negara maju mengatasi masalah sampah. Negara maju umumnya memiliki infrastruktur yang lebih baik, sumber daya finansial yang lebih besar, dan sistem pengelolaan sampah yang lebih maju."
+      ]
+    },
+    {
+      "tag": "dialog.JangkauanAplikasi",
+      "patterns": [
+        "jangkauan aplikasi ini sampah mana",
+        "Aplikasi ini dapar digunakan dimana saja?"
+      ],
+      "responses": [
+        "Aplikasi ini hanya dapat diperuntukkan untuk masyarakat Kota Tegal",
+        "Aplikasi ini hanya digunakan disekitar Kota Tegal "
+      ]
+    },
+    {
+      "tag": "dialog.PengelolaanSampahPerkotaanDanPedesaan",
+      "patterns": [
+        "apa perbedaan pengelolaan samapah perkotaan dan perdesaan",
+        "apakah ada perbedaan di dalam mengelola sampah antara perkotaan dan pedesaan"
+      ],
+      "responses": [
+        "Sampah perkotaan cenderung lebih beragam dan kompleks karena berbagai jenis aktivitas ekonomi dan gaya hidup urban. Jenis sampahnya dapat mencakup limbah rumah tangga, komersial, dan industri. Sedangkan Sampah di perdesaan biasanya bersifat lebih sederhana dan terutama berasal dari rumah tangga dan pertanian. Aktivitas pertanian dan produksi makanan dapat memberikan kontribusi signifikan terhadap jenis sampah di perdesaan.",
+        "Di perkotaan, sering kali ada upaya untuk memilah sampah sejak dari sumber, dan sistem daur ulang umumnya lebih mudah diakses. Sedangkan Pemilahan sampah di perdesaan mungkin kurang umum karena kurangnya fasilitas dan kesadaran masyarakat terhadap praktik ini."
+      ]
+    },
+    {
+      "tag": "dialog.JamOperasionalBankSampah",
+      "patterns": [
+        "jam operasional bank sampah",
+        "bank sampah buka dan tutup jam berapa",
+        "jam kerja bank sampah",
+        "bank sampah buka jam berapa"
+      ],
+      "responses": [
+        "Bisa dilihat di website EcoGreen di menu Pengelola untuk informasi lebih lanjutnya"
+      ]
+    },
+
+    {
+      "tag": "dialog.PeranProdusenMenanganiSampah",
+      "patterns": [
+        "apa peran produsen di dalam menangani masalah sampah",
+        "sebutkan peran produsen untuk menangani masalah sampah"
+      ],
+      "responses": [
+        "produsen memiliki tanggung jawab untuk mengolah sampah kemasan yang dihasilkannya. Konsep ini dikenal dengan sebutan extended producer responsibility (EPR). Produ- sen bertanggung jawab untuk mengam- bil kembali sampah plastik saset yang telah dikumpulkan melalui pemilahan di rumah tangga.",
+        "Produsen dapat merancang produk mereka dengan mempertimbangkan siklus hidupnya, menggunakan bahan ramah lingkungan, dan meminimalkan dampak lingkungan selama produksi, penggunaan, dan pembuangan."
+      ]
+    }
+  ]
+}

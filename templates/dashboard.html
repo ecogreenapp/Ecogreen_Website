@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-fluid">
+  <!-- Row 1 -->
+  <div class="row">
+    <div class="col-md-4">
+      <div class="dashboard-card">
+        <div class="card-content">
+          <h2>Total User</h2>
+          <p class="count">{{ total_users }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="dashboard-card">
+        <div class="card-content">
+          <h2>Total TPS</h2>
+          <p class="count">{{ total_tps }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="dashboard-card">
+        <div class="card-content">
+          <h2>Total Bank Sampah</h2>
+          <p class="count">{{ total_bank }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="row">
+    <div class="col-md-4">
+      <div class="dashboard-card">
+        <div class="card-content">
+          <h2>Total Produk</h2>
+          <p class="count">{{ total_produk }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="dashboard-card">
+        <div class="card-content">
+          <h2>Total Sampah</h2>
+          <p class="count">{{ total_sampah}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="dashboard-card">
+        <div class="card-content">
+          <h2>Total Artikel</h2>
+          <p class="count">{{ total_artikel}}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tambahkan kolom-kolom lain sesuai kebutuhan -->
+  </div>
+  <!-- Row 2 -->
+  <div class="row">
+    <div class="col-md-4">
+      <div class="dashboard-card">
+        <div class="card-content">
+          <h2>Total Feedback</h2>
+          <p class="count">{{ total_hasil }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="dashboard-card">
+        <div class="card-content">
+          <h2>Total History</h2>
+          <p class="count">{{ total_history}}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tambahkan kolom-kolom lain sesuai kebutuhan -->
+  </div>
+</div>
+{% endblock %}

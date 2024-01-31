@@ -1,0 +1,60 @@
+{% extends 'layout.html'%} {%block content%}
+<main>
+  <section>
+    <div class="breadcrumbs">
+      <nav>
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Beranda</a></li>
+            <li>profile</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Breadcrumbs -->
+
+    <div class="container-profil">
+      <div class="row-profil">
+        <div class="column profile-section">
+          <h1>Edit Profil Pengguna</h1>
+          <form action="/settingprofile/{{ user.user_id }}" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+              <label>Nama:</label>
+              <input type="text" class="form-control" name="nama" id="nama" value="{{user.nama}}" required="1">
+            </div>
+            <div class="form-group">
+              <label>Email:</label>
+              <input type="email" class="form-control" name="email" id="email" value="{{user.email}}" required="1">
+            </div>
+            <div class="form-group">
+              <label>Password:</label>
+              <input type="text" class="form-control" name="password" id="password" value="{{user.password}}"
+                required="1">
+            </div>
+
+            <div class="form-group">
+              <div class="form-group">
+                <label>foto Profil:</label>
+                <input type="file" name="foto_profil" accept="image/*" class="custom-file-input" id="foto_profil">
+                <label for="foto_profil" class="btn btn-primary">Masukkan foto profil
+                  Baru</label>
+
+              </div>
+              <br>
+              <div class="form-group">
+
+                {% if user.foto_profil %}
+                <img src="{{ url_for('static', filename=user.foto_profil.replace('\\', '/')) }}" alt="Current Image"
+                  class="img-fluid" width="100px">
+                {% endif %}
+              </div>
+            </div>
+            <br>
+
+            <button type="submit" class="btn btn-primary mb-2">Simpan Perubahan</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

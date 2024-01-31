@@ -1,0 +1,61 @@
+{% extends 'base.html' %} 
+{% block content %}
+<section>
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+        <div class="container-fluid py-6">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mb-4 bg-white" style="margin-top: 50px;">
+                        <div class="card-header pb-0">
+                            <h6>Edit Data TPS</h6>
+                        </div>
+                        {%with messages = get_flashed_messages()%}
+                        {%if messages%}
+                        {% for message in messages %}
+                        <div class="alert alert-success alert-dismissable" role="alert">
+                        {{message}}<button type="button" class="btn-close float-end" data-dismiss="alert"
+                            aria-label="close">
+                        </button>
+                        </div>
+                        {%endfor%}
+                        {%endif%}
+                        {%endwith%}
+                        <div class="card-body px-0 pt-0 pb-2">
+                            <div class="table-responsive p-0">
+                                <form action="/edittps/{{ data_tps.id }}" method="POST">
+                                    <!-- Formulir Edit -->
+                                    <!-- Gunakan nilai awal pada value untuk menampilkan data yang akan diubah -->
+                                    <div class="form-group">
+                                        <label>Nama:</label>
+                                        <input type="text" value="{{ data_tps.nama }}" name="nama" class="form-control" placeholder="Masukkan nama TPS">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Alamat:</label>
+                                        <input type="text" value="{{ data_tps.alamat }}" name="alamat" class="form-control" placeholder="Masukkan alamat">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Kabupaten/Kota:</label>
+                                        <input type="text" value="{{ data_tps.kabupaten_kota }}" name="kabupaten_kota" class="form-control" placeholder="Masukkan kabupaten/kota">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Kecamatan:</label>
+                                        <input type="text" value="{{ data_tps.kecamatan }}" name="kecamatan" class="form-control" placeholder="Masukkan kecamatan">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Desa:</label>
+                                        <input type="text" value="{{ data_tps.desa }}" name="desa" class="form-control" placeholder="Masukkan desa">
+                                    </div>
+                                    <div style="margin-top: 10px;">
+                                    <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                                    <a href="/datatps"><button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button><a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</section>
+{% endblock %}

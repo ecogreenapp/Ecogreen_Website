@@ -1,0 +1,472 @@
+{% extends 'layout.html'%} {%block content%}
+  <main id="main" style="background-color: white;">
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <nav>
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Beranda</a></li>
+            <li>Jenis Sampah</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Breadcrumbs -->
+    <section id="headerj">
+    	<div class="container" style="margin-top: 2%;">
+      		<div class="mx-auto text-center wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
+				<h2 class="mb-5">Jenis Sampah yang dapat kamu jual</h2>
+      			</div>
+					<div class="jenis-wrapper mx-auto">
+						<div class="row justify-content-center">
+							<div class="col-lg-2">
+								<div class="single-jenis jenis-2 wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.1s">
+									<div class="jenis-icon">
+										<a href="#plastik"><img src="{{ url_for('static', filename = 'assets/img/plastik.png') }}" alt class="filter-icon" width="120px"/></a>
+									</div>
+									<div class="jenis-content">
+										<a href="#plastik"><h4 class="jenis-title">Plastik</h4></a>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-2">
+								<div class="single-jenis jenis-2 wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.5s">
+									<div class="jenis-icon">
+										<a href="#kertas"><img src="{{ url_for('static', filename = 'assets/img/kertas.png') }}" alt class="filter-icon" width="120px"/></a>
+									</div>
+									<div class="jenis-content">
+										<a href="#kertas"><h4 class="jenis-title">Kertas</h4></a>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-2">
+								<div class="single-jenis jenis-2 wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.2s">
+									<div class="jenis-icon">
+										<a href="#botol"><img src="{{ url_for('static', filename = 'assets/img/botol.png') }}" alt class="filter-icon" width="120px"/></a>
+									</div>
+									<div class="jenis-content">
+										<a href="#botol"><h4 class="jenis-title">Botol</h4></a>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-2">
+								<div class="single-jenis jenis-2 wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.6s">
+									<div class="jenis-icon">
+										<a href="#logam"><img src="{{ url_for('static', filename = 'assets/img/logam.png') }}" alt class="filter-icon" width="120px"/></a>
+									</div>
+									<div class="jenis-content">
+										<a href="#logam"><h4 class="jenis-title">Aluminium</h4></a>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-2">
+								<div class="single-jenis jenis-2 wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.4s">
+									<div class="jenis-icon">
+										<a href="#elektronik"><img src="{{ url_for('static', filename = 'assets/img/elektronik.png') }}" alt class="filter-icon" width="120px"/></a>
+									</div>
+									<div class="jenis-content">
+										<a href="#elektronik"><h4 class="jenis-title">Elektronik</h4></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+    <!-- ======= jplastik Section ======= -->
+    <section id="plastik" class="jenissampah">
+      <div class="container" data-aos="fade-up">
+
+        <div class="text-center">
+          <h2>Sampah Plastik</h2>
+          <p>Sampah plastik yang dapat dijual dibank sampah</p>
+        </div>
+
+        <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/bungkuskopi.jpg') }}" class="jenissampah-img flex-shrink-0" alt="">
+                  </div>
+                  <h3>
+                    Bungkus Minuman Sachet
+                  </h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+
+            <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/bungkus.png') }}" class="jenissampah-img flex-shrink-0" alt="">
+                  </div>
+                  <h3>Bungkus Snack</h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+
+            <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/bening.png') }}" class="jenissampah-img flex-shrink-0" alt="">
+
+                  </div>
+                  <h3>Cup Bening</h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+
+            <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/glaswar.png') }}" class="jenissampah-img flex-shrink-0" alt="">
+                  </div>
+                  <h3>Cup Warna</h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+
+            <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/plasput.png') }}" class="jenissampah-img flex-shrink-0" alt="">
+                  </div>
+                  <h3>Plastik Putih</h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+            <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center ">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/plaswar.png') }}" class="jenissampah-img flex-shrink-0" alt="">
+                  </div>
+                  <h3>Plastik Warna</h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End plastik Section -->
+
+        <!-- ======= Kertas Section ======= -->
+    <section id="kertas" class="jenissampah">
+      <div class="container" data-aos="fade-up">
+
+        <div class="text-center">
+          <h2>Sampah Kertas</h2>
+          <p>Jenis sampah kertas yang dapat dijual</p>
+        </div>
+
+        <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/putih.png') }}" class="jenissampah-img flex-shrink-0" alt="">
+                  </div>
+                  <h3>
+                    Kertas Putihan
+                  </h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+
+            <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/koran.png') }}" class="jenissampah-img flex-shrink-0" alt="">
+                  </div>
+                  <h3>Koran</h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+
+            <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/mjl.png') }}" class="jenissampah-img flex-shrink-0" alt="">
+
+                  </div>
+                  <h3>Majalah</h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+
+            <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/buku.png') }}" class="jenissampah-img flex-shrink-0" alt="">
+                  </div>
+                  <h3>Buku</h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+
+            <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/warna.png') }}" class="jenissampah-img flex-shrink-0" alt="">
+                  </div>
+                  <h3>Kertas Warna</h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+            <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center ">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/duplek.png') }}" class="jenissampah-img flex-shrink-0" alt="">
+                  </div>
+                  <h3>Dupleks</h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+                        <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center ">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/kardus.png') }}" class="jenissampah-img flex-shrink-0" alt="">
+                  </div>
+                  <h3>Kardus</h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+            <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center ">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/semen.png') }}" class="jenissampah-img flex-shrink-0" alt="">
+                  </div>
+                  <h3>Kertas Semen</h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End KertasSection -->
+
+        <!-- ======= Botol Section ======= -->
+    <section id="botol" class="jenissampah">
+      <div class="container" data-aos="fade-up">
+
+        <div class="text-center">
+          <h2>Sampah Botol</h2>
+          <p>Jenis sampah Botol yang dapat dijual</p>
+        </div>
+
+        <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/botolbening.png') }}" class="jenissampah-img flex-shrink-0" alt="">
+                  </div>
+                  <h3>Botol Plastik Bening</h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+            <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center ">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/plastikwarna.png') }}" class="jenissampah-img flex-shrink-0" alt="">
+                  </div>
+                  <h3>Botol Plastik Warna</h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+                        <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center ">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/kacabening.png') }}" class="jenissampah-img flex-shrink-0" alt="">
+                  </div>
+                  <h3>Botol Kaca Bening</h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+            <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center ">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/kacawarna.png') }}" class="jenissampah-img flex-shrink-0" alt="">
+                  </div>
+                  <h3>Botol Kaca Warna</h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- En botol sction -->
+
+            <!-- ======= Aluminium Section ======= -->
+    <section id="logam" class="jenissampah">
+      <div class="container" data-aos="fade-up">
+
+        <div class="text-center">
+          <h2>Sampah Aluminium</h2>
+          <p>Jenis sampah aluminium yang dapat dijual</p>
+        </div>
+
+        <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/kaleng.jpg') }}" class="jenissampah-img flex-shrink-0" alt="">
+                  </div>
+                  <h3>
+                    Kaleng
+                  </h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+
+            <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/panci.jpg') }}" class="jenissampah-img flex-shrink-0" alt="">
+                  </div>
+                  <h3>Panci / Wajan</h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+
+            <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/kalengmin.jpg') }}" class="jenissampah-img flex-shrink-0" alt="">
+
+                  </div>
+                  <h3>Botol Kaleng</h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End aluminium Section -->
+            <!-- ======= Elektronik Section ======= -->
+    <section id="elektronik" class="jenissampah">
+      <div class="container" data-aos="fade-up">
+
+        <div class="text-center">
+          <h2>Sampah Elektronik</h2>
+          <p>Jenis sampah Elektronik yang dapat dijual</p>
+        </div>
+
+        <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/tv.jpg') }}" class="jenissampah-img flex-shrink-0" alt="">
+                  </div>
+                  <h3>
+                    TV
+                  </h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+
+            <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/hp.jpg') }}" class="jenissampah-img flex-shrink-0" alt="">
+                  </div>
+                  <h3>Hp</h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+
+            <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/laptop.jpg') }}" class="jenissampah-img flex-shrink-0" alt="">
+
+                  </div>
+                  <h3>laptop</h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+
+            <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/kulkas.jpg') }}" class="jenissampah-img flex-shrink-0" alt="">
+                  </div>
+                  <h3>Kulkas</h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+
+            <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/kipas.jpg') }}" class="jenissampah-img flex-shrink-0" alt="">
+                  </div>
+                  <h3>Kipas</h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+            <div class="swiper-slide">
+              <div class="jenissampah-wrap " >
+                <div class="jenissampah-item text-center ">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename = 'assets/img/mesin_cuci.jpg') }}" class="jenissampah-img flex-shrink-0" alt="">
+                  </div>
+                  <h3>Mesin cuci</h3>
+                </div>
+              </div>
+            </div><!-- End jenissampah item -->
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End ElektronikSection -->
+
+  </main><!-- End #main -->
+{% endblock %}

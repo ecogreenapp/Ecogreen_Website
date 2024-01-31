@@ -1,0 +1,90 @@
+{% extends 'layout.html'%} {%block content%}
+<main id="main">
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs">
+    <nav>
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Beranda</a></li>
+          <li>Bank Sampah</li>
+        </ol>
+      </div>
+    </nav>
+  </div>
+  <!-- End Breadcrumbs -->
+
+  <!-- ======= banksampah Section 
+
+  <section id="hero" class="hero d-flex align-items-center section-bg" style="padding-top: 20px;">
+    <div class="container" style="margin-top: 1px;" >
+      <div class="row justify-content-between gy-5">
+        <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column  align-items-center align-items-lg-start text-center text-lg-start" style="padding-top: 30px;" >
+          <h2 data-aos="fade-up">Daftar Bank Sampah <br>di Tegal</h2>
+          <p data-aos="fade-up" data-aos-delay="100">Temukan Bank Sampah Terdekat! Dapatkan informasi lengkap mengenai lokasi dan layanan bank sampah di sekitar Anda untuk mendukung upaya daur ulang dan keberlanjutan lingkungan. Bersama-sama kita bisa menciptakan lingkungan yang lebih bersih dan sehat</p>
+          
+        </div>
+        <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
+          <img src="{{url_for('static', filename ='assets/img/banksampah.png')}}" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300" width="750" style="padding-right: 50px;">
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <section id="chefs" class="chefs section-bg">
+    <div
+      class="container"
+      data-aos="fade-up"
+      style="margin-top: 3%; margin-bottom: 3%"
+    >
+      <div class="row" style="margin-bottom: 20px">
+        <div class="col-md-8">
+          <h3>Daftar BankSampah</h3>
+        </div>
+        <div class="col-md-4">
+          <div class="sidebar-search">
+            <form action="/banksampah" method="post">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="q"
+                  placeholder="Cari BankSampah terdekat.."
+                  value
+                />
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="submit">
+                    <i class="bi bi-search"></i>
+                    <!-- Ini adalah ikon pencarian -->
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="row gy-4">
+          {% for bank in banksampah %}
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                  <a href="{% if bank.nama == 'Bank Sampah Mawar Biru' %}/mawarbiru{% endif %}">
+                      <div class="chef-member {% if bank.nama == 'Bank Sampah Mawar Biru' %}mawarbiru{% endif %}">
+                          <div class="member-info">
+                              <h4>{{ bank.nama }}</h4>
+                              <span><i class="bi bi-geo-alt">{{ bank.alamat }}</i></span>
+                          </div>
+                          {% if bank.nama == 'Bank Sampah Mawar Biru' %}
+                              <div class="position-icon">
+                                  <img src="{{url_for('static', filename='assets/img/partner.png')}}" alt="Tangan Jabatan" style="width: 50px; height: 50px;">
+                              </div>
+                          {% endif %}
+                      </div>
+                  </a>
+              </div>
+              <!-- End Chefs Member -->
+          {% endfor %}
+      </div>
+
+    </div>
+  </section>
+  <!-- End bank sampah Section -->
+</main>
+{% endblock %}

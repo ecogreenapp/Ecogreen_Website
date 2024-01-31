@@ -1,0 +1,170 @@
+{% extends 'base.html'%} {%block content%}
+<section>
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+        <div class="container-fluid py-6">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mb-4 bg-white" style="margin-top: 50px;">
+                        <div class="card-header pb-0">
+                            <h6>Daftar Artikel
+                                <button type="button" class="btn btn-success float-end" style="margin-bottom: 1%;"
+                                    data-toggle="modal" data-target="#mymodal"><i
+                                        class="ti ti-plus"></i>ARTIKEL</button>
+                                </h>
+                        </div>
+                        {%with messages = get_flashed_messages()%}
+                        {%if messages%}
+                        {% for message in messages %}
+                        <div class="alert alert-success alert-dismissable" role="alert">
+                            {{message}}<button type="button" class="btn-close float-end" data-dismiss="alert"
+                                aria-label="close">
+                            </button>
+                        </div>
+                        {%endfor%}
+                        {%endif%}
+                        {%endwith%}
+                        <div class="card-body px-0 pt-0 pb-2">
+                            <div class="table-responsive p-0">
+                                <table class="table align-items-center mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th
+                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                Judul</th>
+                                            <th
+                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                                Gambar</th>
+                                            <th
+                                                class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                Isi
+                                                Artikel</th>
+                                            <th
+                                                class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                Kategori</th>
+                                            <th
+                                                class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                Tanggal</th>
+                                            <th
+                                                class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for datartikel in data_artikel %}
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex px-2 py-1">
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <h6 class="mb-0 text-sm ">{{
+                                                            datartikel.judul
+                                                            }}</h6>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <img src="{{ url_for('static', filename=datartikel.gambar.replace('\\', '/')) }}"
+                                                    alt="Artikel Image" class="img-fluid"
+                                                    style="max-width: 100px; max-height: 100px;">
+                                            </td>
+                                            <td class=" align-middle text-center">
+                                                <span class="mb-0 text-sm  font-weight-bold">{{
+                                                    datartikel.isi_artikel
+                                                    }}</span>
+                                            </td>
+                                            <td class="align-middle text-center text-sm">
+                                                <span class="mb-0 text-sm ">{{
+                                                    datartikel.kategori
+                                                    }}</span>
+                                            </td>
+                                            <td class="align-middle text-center text-sm">
+                                                <span class="mb-0 text-sm ">{{
+                                                    datartikel.tanggal
+                                                    }}</span>
+                                            </td>
+                                            <td class="align-middle text-center text-sm">
+                                                <a href="{{ url_for('edit_artikel', id=datartikel.id) }}"
+                                                    class="btn btn-warning btn xs" style="margin-bottom: 5px;">
+                                                    <span><i class="ti ti-pencil"></i></span></a>
+                                                <a href="{{ url_for('delete_artikel', artikel_id=datartikel.id) }}"
+                                                    class="btn btn-danger btn-xs"
+                                                    onclick="return confirm('Apakah kamu yakin akan menghapusnya?')">
+                                                    <span><i class="ti ti-trash"></i></span></a>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- START CREATE NEW DATA ARTIKEL -->
+                    <div id="mymodal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-primary" style="align-content: center;">Tambah Artikel
+                                    </h5>
+                                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="/datartikel" method="POST" enctype="multipart/form-data"
+                                        onsubmit="return validateForm()">
+                                        <div id="error-message" class="alert alert-danger" style="display: none;">
+                                            Mohon lengkapi semua kolom.
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Judul</label>
+                                            <input type="text" name="judul" class="form-control" id="judul"
+                                                placeholder="Masukkan judul artikel">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Gambar</label>
+                                            <input name="gambar" type="file" accept="image/*" class="form-control"
+                                                id="gambar" placeholder="Masukkan gambar artikel">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Isi Artikel</label>
+                                            <textarea name="isi_artikel" class="form-control" id="isi_artikel" rows="3"
+                                                placeholder="Masukkan isi artikel" required></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>kategori</label>
+                                            <input name="kategori" type="text" class="form-control" id="kategori"
+                                                placeholder="Masukkan kategori artikel">
+                                        </div>
+
+
+
+                                        <button type="submit" class="btn btn-primary mb-2">Save</button>
+
+                                    </form>
+                                    <!-- Script JavaScript untuk validasi formulir -->
+                                    <script>
+                                        function validateForm() {
+                                            var judul = document.getElementById('judul').value;
+                                            var gambar = document.getElementById('gambar').value;
+                                            var isi_artikel = document.getElementById('isi_artikel').value;
+                                            var kategori = document.getElementById('kategori').value;
+
+                                            if (judul === '' || gambar === '' || isi_artikel === '' || kategori === '') {
+                                                document.getElementById('error-message').style.display = 'block';
+                                                return false;
+                                            }
+
+                                            return true;
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</section>
+{% endblock %}

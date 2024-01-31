@@ -1,0 +1,69 @@
+{% extends 'base.html' %} 
+{% block content %}
+<section>
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+        <div class="container-fluid py-6">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mb-4 bg-white" style="margin-top: 50px;">
+                        <div class="card-header pb-0">
+                            <h6>Edit Data Banksampah</h6>
+                        </div>
+                        {%with messages = get_flashed_messages()%}
+                        {%if messages%}
+                        {% for message in messages %}
+                        <div class="alert alert-success alert-dismissable" role="alert">
+                        {{message}}<button type="button" class="btn-close float-end" data-dismiss="alert"
+                            aria-label="close">
+                        </button>
+                        </div>
+                        {%endfor%}
+                        {%endif%}
+                        {%endwith%}
+                        <div class="card-body px-0 pt-0 pb-2">
+                            <div class="table-responsive p-0">
+                                <form action="/editbanksampah/{{data_banksampah.id}}" method="POST">
+                                    <!-- Formulir Edit -->
+                                    <!-- Gunakan nilai awal pada value untuk menampilkan data yang akan diubah -->
+                                    <div class="form-group">
+                                    <label>Nama</label>
+                                    <input type="text" name="nama" class="form-control"
+                                        id="nama" value="{{ data_banksampah.nama }}" required
+                                        placeholder="Masukkan nama Banksampah">
+                                    </div>
+
+                                    <div class="form-group">
+                                    <label>Alamat</label>
+                                    <input name="alamat" type="text" class="form-control"
+                                        id="alamat" value="{{ data_banksampah.alamat }}" required
+                                        placeholder="Masukkan alamat banksampah">
+                                    </div>
+
+                                    <div class="form-group">
+                                    <label>Owner</label>
+                                    <input name="pj" type="text" class="form-control"
+                                        id="pj" value="{{ data_banksampah.pj }}" required
+                                        placeholder="Masukkan owner banksampah">
+                                    </div>
+
+                                    <div class="form-group" style="margin-bottom: 1%;">
+                                    <label>No HP</label>
+                                    <input name="no_hp" type="number"
+                                        class="form-control"
+                                        id="no_hp" value="{{ data_banksampah.no_hp }}" required
+                                        placeholder="Masukkan no_hp banksampah" >
+                                    </div>
+                                    <div style="margin-top: 10px;">
+                                    <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                                    <a href="/databanksampah"><button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button><a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</section>
+{% endblock %}

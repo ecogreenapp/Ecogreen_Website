@@ -1,0 +1,403 @@
+{% extends 'layout.html'%} {%block content%}
+<!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center section-bg">
+    <div class="container">
+      <div class="row justify-content-between gy-5">
+        <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
+          <h2 data-aos="fade-up">Peduli Lingkungan <br>Bersama EcoGreen</h2>
+          <p data-aos="fade-up" data-aos-delay="100">Temukan Pengetahuan tentang Sampah dengan Mudah</p>
+          <div class="d-flex" data-aos="fade-up" data-aos-delay="5">
+            {% if 'loggedin' in session and session['loggedin'] %}
+            <a href="/deteksi"  class="btn btn-primary" style="margin: 0 10px;border-radius: 50px;color: white;width: 150px;height: 40px; background-color:#00B98E; text-align: center; display: flex; justify-content: center; align-items: center;">TrashTec</a>
+            <a href="https://www.youtube.com/watch?v=iF_QkVPgXuQ&ab_channel=LOOPINGLAB" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+            {% else %}
+            <a href="/login"  class="btn btn-primary" style="margin: 0 10px;border-radius: 50px;color: white;width: 150px;height: 40px; background-color: #00B98E;text-align: center; display: flex; justify-content: center; align-items: center;">Get Started</a>
+            <a href="https://www.youtube.com/watch?v=iF_QkVPgXuQ&ab_channel=LOOPINGLAB" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+            {% endif %}
+          </div>
+        </div>
+        <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
+          <img src="{{url_for('static', filename ='assets/img/hero.png')}}" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300" width="750" style="padding-right: 50px;">
+        </div>
+      </div>
+    </div>
+  </section><!-- End Hero Section -->
+
+<main id="main">
+
+  <section id="fitur-utama" style="background-color: white;">
+    <div class="card_wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2>Fitur Utama</h2>
+          </div>
+          <div class="col-lg-4">
+            <div class="card_box">
+              <div class="first_card position-relative">
+                <a href="#"><img class="img-fluid w-100"
+                    src="{{ url_for('static', filename ='assets/img/fiturchat.png') }}" alt="">
+                  <div class="card_sub">
+                    <h3>Greenbot</h3>
+                  </div>
+                </a>
+              </div>
+              <div class="card_text">
+                <div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <h2>Greenbot</h2>
+                  </div>
+                  <p>Fitur chatbot membantu Anda berinteraksi secara cerdas. Tanyakan apapun terkait EcoGreen dan
+                    dapatkan jawaban instan </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card_box">
+              <div class="first_card position-relative">
+                <a href="/deteksi"><img class="img-fluid w-100"
+                    src="{{ url_for('static', filename ='assets/img/trashtec.png') }}" alt="">
+                  <div class="card_sub">
+                    <h3>TrashTec</h3>
+                  </div>
+                </a>
+              </div>
+              <div class="card_text">
+                <div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <a href="/deteksi">
+                      <h2>TrashTec</h2>
+                    </a>
+                  </div>
+                  <p> Dengan teknologi terkini, TrashTec membantu Anda dalam mengidentifikasi jenis sampah dan
+                    memberikan informasi yang berguna. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card_box">
+              <div class="first_card position-relative">
+                <a href="/feedback"><img class="img-fluid w-100"
+                    src="{{ url_for('static', filename ='assets/img/fiturSA.png') }}" alt="">
+                  <div class="card_sub">
+                    <h3>Sentimen Analisis</h3>
+                  </div>
+                </a>
+              </div>
+              <div class="card_text">
+                <div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <a href="/feedback">
+                      <h2>Sentimen Analisis</h2>
+                    </a>
+                  </div>
+                  <p>Fitur sentimen membantu Anda melacak dan menganalisis respons terhadap EcoGreen secara real-time.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ======= End Menu TrashTec Section ======= !>
+
+    <-- =======Statistik Section ======= -->
+  <section id="statistik" style="background-color: white;">
+    <div class="container" data-aos="fade-up">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6 wow zoomIn" data-wow-delay="0.1s">
+          <div class="diagram">
+            <div class="d1"><a>2019</a></div>
+            <div class="d2">2020</div>
+            <div class="d3">2021</div>
+            <div class="d4">2022</div>
+            <div class="d5">2023</div>
+            <ul class="diagrambatang">
+              <li>
+                <div>79.684 ton</div>
+              </li>
+              <li>
+                <div>79.366 ton</div>
+              </li>
+              <li>
+                <div>79.049 ton</div>
+              </li>
+              <li>
+                <div>78.733 ton</div>
+              </li>
+              <li>
+                <div>73.042 ton</div>
+              </li>
+              <li>
+                <div>70.000 ton</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">Statistik Sampah</div>
+          <h2 class="mb-4">Data Timbulan Sampah di Kota Tegal</h2>
+          <p class="justify">Berdasarkan data dari Dinas Lingkungan Hidup Kota Tegal,
+            Dalam lima tahun terakhir, Kota Tegal telah menyaksikan peningkatan yang signifikan dalam timbulan sampah.
+            Data yang tercatat sejak tahun 2019 hingga 2023 menunjukkan bahwa sampah yang dihasilkan oleh masyarakat
+            semakin bertambah dari tahun ke tahun.
+            Ini menjadi peringatan serius akan tantangan lingkungan yang sedang dihadapi. </p>
+          <a class="btn-primary rounded-pill py-2 px-3 mt-3" style="color: white;"
+            onclick="this.style.backgroundColor='#004d00';" href="/statistik">Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+  </section><!-- End statistik Section -->
+
+
+  <section id="features" class="features-area" style="background-color: white;">
+    <div class="container" style="margin-top: 3%;">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="section-header">
+            <h4>Sampahmu bisa jadi <span> Cuan?</span></h4>
+            <h3>Bagaimana caranya?</h3>
+          </div>
+        </div>
+      </div>
+      <div class="features-wrapper">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="single-features features-2 wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.1s">
+              <span class="features-number">01</span>
+              <div class="features-icon">
+                <img src="{{ url_for('static', filename = 'assets/img/tanya.png') }}" alt class="filter-icon"
+                  width="120px" />
+              </div>
+              <div class="features-content">
+                <h4 class="features-title"><a href="/jenissampah">Apa Sampahmu?</a></h4>
+                <p>Jenis sampah yang bisa menghasilkan uang adalah sampah berikut...</p>
+              </div>
+              <div class="features-btn">
+                <a href="/jenissampah"><i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="single-features features-2 wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.3s">
+              <span class="features-number">02</span>
+              <div class="features-icon">
+                <img src="{{ url_for('static', filename = 'assets/img/uang.png') }}" alt class="filter-icon"
+                  width="120px" />
+              </div>
+              <div class="features-content">
+                <h4 class="features-title"><a href="/jenissampah">Berapa harganya?</a></h4>
+                <p>jika kalian tau, Sampah memiliki harga..</p>
+              </div>
+              <div class="features-btn">
+                <a href="/hargasampah"><i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="single-features features-2 wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.5s">
+              <span class="features-number">03</span>
+              <div class="features-icon">
+                <img src="{{ url_for('static', filename = 'assets/img/olah.png') }}" alt class="filter-icon"
+                  width="120px" />
+              </div>
+              <div class="features-content">
+                <h4 class="features-title"><a href="/produk">Kemana Sampahmu?</a></h4>
+                <p>Kamu bisa memilah sisa produkmu dan dapat bermanfaat untuk ini</p>
+              </div>
+              <div class="features-btn">
+                <a href="/produk"><i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!--Pengetahuan end-->
+
+  <!--video -->
+  <section id="video" class="video-area">
+    <div class="container-xxl py-6">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6 wow zoomIn" data-wow-delay="0.1s">
+            <!-- Sisipkan video YouTube menggunakan iframe -->
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/UBw9T6IspVc" frameborder="0"
+              allowfullscreen></iframe>
+          </div>
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="d-inline-block border rounded-pill text-primary px-4 mb-3"><a style="color: aliceblue;">Video
+                Edukasi</a></div>
+            <h1>Kita masih di Bumi</h1>
+            <p class="justify" style="color: aliceblue;">Di masa depan, kita akan menghadapi tantangan besar terkait
+              sampah. Dengan pertumbuhan populasi dan perubahan gaya hidup, timbulan sampah semakin meningkat. Namun,
+              ini juga menjadi peluang untuk mengubah pola konsumsi kita. Dengan tindakan yang tepat, kita dapat
+              menciptakan masa depan yang lebih berkelanjutan. Mari bersama-sama berkontribusi dalam mengelola sampah
+              dan merawat bumi kita untuk generasi mendatang.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--video end-->
+
+  <!--tps section-->
+  <section id="tps" class="tps-area" style="background-color: white;">
+    <div class="container" style="margin-top: 3%;">
+      <div class="row justify-content-text-left">
+        <div class="col-lg-6">
+          <div class="section-title text-left">
+            <h6 class="sub-title" style="visibility: visible;">Dimana kita bisa membuang sampah?</h6>
+            <h3 class="title">Temukan TPS terdekatmu!</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12 wow fadeInUpBig" data-wow-duration="1s">
+        <div class="card mt-4">
+          <div class="card-body">
+            <div class="col-md-12">
+              <div class="table-responsive">
+                <table class="table table-striped table-inverse">
+                  <thead class="thead-inverse">
+                    <th>Nama TPS</th>
+                    <th>Alamat</th>
+                    <th>Kabupaten/Kota</th>
+                    <th>Kecamatan</th>
+                    <th>Desa</th>
+                  </thead>
+                  <tbody>
+                    {% for tps in tps %}
+                    <tr>
+                      <td>{{ tps.nama }}</td>
+                      <td>{{ tps.alamat }}</td>
+                      <td>{{ tps.kabupaten_kota }}</td>
+                      <td>{{ tps.kecamatan }}</td>
+                      <td>{{ tps.desa }}</td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ======= tps end Section ======= -->
+
+  <!-- ======= banksampah Section ======= -->
+  <section id="chefs" class="chefs section-bg">
+    <div class="container" data-aos="fade-up" style="margin-top: 3%;">
+      <div class="mx-auto text-center wow fadeInUp" data-wow-delay="0.1s" style="padding-bottom: 20px;">
+        <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">BankSampah</div>
+        <h3 class="title">kita bisa menjualnya disini!<h3>
+      </div>
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+          <div class="chef-member" style="border: 1px solid #00B98E;">
+            <div class="member-info">
+              <a href="/mawarbiru"><h4>Bank Sampah Mawar Biru</h4>
+              <span><i class="bi bi-geo-alt">
+                  Jl. Rambutan Gg 11 RT 10 / RW 05, Kraton, Tegal Barat, Kota Tegal</i></span></a>
+            </div>
+            <div class="position-icon">
+              <img src="{{url_for('static', filename='assets/img/partner.png')}}" alt="Tangan Jabatan"
+                style="width: 50px; height: 50px;margin-top: -120px; margin-right: 5px;">
+            </div>
+          </div>
+        </div><!-- End Chefs Member -->
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+          <div class="chef-member">
+            <div class="member-info">
+              <h4>Bank Sampah Maju Terus</h4>
+              <span><i class="bi bi-geo-alt"> Jl. Teuku Umar Gg Parangtritis RT 04 / RW 03, Debong Kidul, Tegal Selatan,
+                  Kota Tegal</i></span>
+            </div>
+          </div>
+        </div><!-- End Chefs Member -->
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+          <div class="chef-member">
+            <div class="member-info">
+              <h4>Bank Sampah Wijaya Kusuma</h4>
+              <span><i class="bi bi-geo-alt"> Jl. Moh Toha RT 02 / RW 05, Kaligangsa, Margadana, Kota Tegal</i></span>
+            </div>
+          </div>
+        </div><!-- End Chefs Member -->
+      </div>
+    </div>
+    <div class="mx-auto text-center wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: 3%;margin-top: 3%;">
+      <a class="btn-primary rounded-pill py-2 px-3 mt-3" style="color: white;"
+        onclick="this.style.backgroundColor='#004d00';" href="/banksampah">Selengkapnya</a>
+    </div>
+  </section><!-- End bank sampah Section -->
+
+  <!-- contact Start -->
+  <section id="kontak" style="background-color: white; ">
+    <div class="container-xxl bg-primary my-6 wow fadeInUp" data-wow-delay="0.1s">
+      <div class="container px-lg-5">
+        <div class="row align-items-center" style="height: 250px;">
+          <div class="col-12 col-md-6">
+            <h3 class="text-white">Feedback</h3>
+            <small class="text-white">Ada pertanyaan atau saran? Jangan ragu untuk menghubungi kami!</small>
+            <div class="position-relative w-100 mt-3">
+              <a href="/feedback " class="btn btn-primary" style="border-radius:50px ;">Kotak Saran</a>
+            </div>
+          </div>
+          <div class="col-md-6 text-center mb-n5 d-none d-md-block">
+            <img class="img-fluid mt-5" style="max-height: 250px;"
+              src="{{ url_for('static', filename = 'assets/img/message.png') }}">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact End-->
+
+  <section id="blog" class="blog-area" style="background-color: white;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="section-title text-center" style="padding-bottom: 5%;">
+            <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">Artikel</div>
+            <h2 class="title">Berita & Artikel</h2>
+          </div>
+        </div>
+      </div>
+      <div class="blog-wrapper">
+        <div class="row">
+          {% for artikel in data_artikel[:3] %}
+          <div class="col-lg-4 blog-col">
+            <div class="single-blog mt-55 wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.4s">
+              <div class="blog-image">
+                <a href="/artikeldetails/{{ artikel.id }}"><img
+                    src="{{ url_for('static', filename=artikel.gambar.replace('\\', '/')) }}"
+                    alt="{{ artikel.judul }}"></a>
+                <span class="date">{{ artikel.tanggal.strftime('%A, %d/%m/%Y %H:%M') }}</span>
+              </div>
+              <div class="blog-content">
+                <h4 class="blog-title"><a href="/artikeldetails/{{ artikel.id }}">{{ artikel.judul }}</a></h4>
+                <p>
+                  {{ artikel.isi_artikel[:100] }}...
+                </p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main><!-- End #main -->
+{%endblock%}

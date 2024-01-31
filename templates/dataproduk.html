@@ -1,0 +1,152 @@
+{% extends 'base.html'%} {%block content%}
+<section>
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+        <div class="container-fluid py-6">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mb-4 bg-white" style="margin-top: 50px;">
+                        <div class="card-header pb-0">
+                            <h6>Daftar Produk Daur Ulang
+                                <button type="button" class="btn btn-success float-end" style="margin-bottom: 1%;"
+                                    data-toggle="modal" data-target="#mymodal"><i class="ti ti-plus"></i>PRODUK DAUR
+                                    ULANG</button>
+                                </h>
+                        </div>
+                        {%with messages = get_flashed_messages()%}
+                        {%if messages%}
+                        {% for message in messages %}
+                        <div class="alert alert-success alert-dismissable" role="alert">
+                            {{message}}<button type="button" class="btn-close float-end" data-dismiss="alert"
+                                aria-label="close">
+                            </button>
+                        </div>
+                        {%endfor%}
+                        {%endif%}
+                        {%endwith%}
+                        <div class="card-body px-0 pt-0 pb-2">
+                            <div class="table-responsive p-0">
+                                <table class="table align-items-center mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th
+                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                nama Produk</th>
+                                            <th
+                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                                Gambar</th>
+                                            <th
+                                                class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                Link Video Tutorial
+                                            </th>
+
+                                            <th
+                                                class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for dataproduk in data_produk %}
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex px-2 py-1">
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <h6 class="mb-0 text-sm ">{{
+                                                            dataproduk.nama_produk
+                                                            }}</h6>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <img src="{{ url_for('static', filename=dataproduk.gambar_produk.replace('\\', '/')) }}"
+                                                    alt="Product Image" class="img-fluid"
+                                                    style="max-width: 100px; max-height: 100px;">
+                                            </td>
+                                            <td class=" align-middle text-center">
+                                                <span class="mb-0 text-sm  font-weight-bold">{{
+                                                    dataproduk.link_video
+                                                    }}</span>
+                                            </td>
+
+                                            <td class="align-middle text-center text-sm">
+                                                <a href="{{ url_for('edit_produk', id=dataproduk.id) }}"
+                                                    class="btn btn-warning btn xs" style="margin-bottom: 5px;">
+                                                    <span><i class="ti ti-pencil"></i></span></a>
+                                                <a href="{{ url_for('delete_produk', produk_id=dataproduk.id) }}"
+                                                    class="btn btn-danger btn-xs"
+                                                    onclick="return confirm('Apakah kamu yakin akan menghapusnya?')">
+                                                    <span><i class="ti ti-trash"></i></span></a>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- START CREATE NEW DATA ARTIKEL -->
+                    <div id="mymodal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-primary" style="align-content: center;">Tambah Produk
+                                    </h5>
+                                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="/dataproduk" method="POST" enctype="multipart/form-data"
+                                        onsubmit="return validateForm()">
+                                        <div id="error-message" class="alert alert-danger" style="display: none;">
+                                            Mohon lengkapi semua kolom.
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Nama Produk</label>
+                                            <input type="text" name="nama_produk" class="form-control" id="nama_produk"
+                                                placeholder="Masukkan nama produk">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Gambar Produk</label>
+                                            <input name="gambar_produk" type="file" accept="image/*"
+                                                class="form-control" id="gambar_produk"
+                                                placeholder="Masukkan gambar produkl">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Link Video Tutorial</label>
+                                            <input name="link_video" type="text" class="form-control" id="link_video"
+                                                placeholder="Masukkan link video tutorial">
+                                        </div>
+
+
+
+                                        <button type="submit" class="btn btn-primary mb-2">Save</button>
+
+                                    </form>
+                                    <!-- Script JavaScript untuk validasi formulir -->
+                                    <script>
+                                        function validateForm() {
+                                            var nama_produk = document.getElementById('nama_produk').value;
+                                            var gambar_produk = document.getElementById('gambar_produk').value;
+                                            var link_video = document.getElementById('link_video').value;
+
+
+                                            if (nama_produk === '' || gambar_produk === '' || link_video === '') {
+                                                document.getElementById('error-message').style.display = 'block';
+                                                return false;
+                                            }
+
+                                            return true;
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</section>
+{% endblock %}

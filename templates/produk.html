@@ -1,0 +1,49 @@
+{% extends 'layout.html'%} {%block content%}
+<main id="main">
+
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs">
+    <nav>
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Beranda</a></li>
+          <li>Produk</li>
+        </ol>
+      </div>
+    </nav>
+  </div><!-- End Breadcrumbs -->
+  <section id="produk" style="background-color: white;">
+    <div class="container" data-aos="fade-up">
+      <div class="row g-9 align-items-center">
+        <div class="col-lg-6 wow zoomIn" data-wow-delay="0.1s">
+          <!-- Teks Jenis Sampah -->
+          <div class="jenis-sampah">
+            <img src="{{url_for('static', filename ='assets/img/produkimg.png')}}" width="350px"
+              style="align-items: center;">
+            <h3>Temukan Keindahan dalam Kreativitas Daur Ulang:</h3>
+            <p class="justify"> Jelajahi Koleksi Produk Kami dari Sampah Anorganik yang Menawan dan Ramah Lingkungan</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <!-- Kotak Produk -->
+          <div class="row produk-container">
+            {% for item in produk %}
+            <div class="col-md-6">
+              <div class="produk">
+                <img src="{{url_for('static', filename=item.gambar_produk.replace('\\', '/'))}}"
+                  alt="{{ item.nama_produk }}">
+                <h4>{{ item.nama_produk }}</h4>
+                <a href="{{ item.link_video }}" class="btn btn-primary rounded-pill">Lihat Tutorial</a>
+              </div>
+            </div>
+            {% endfor %}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{% endblock %}

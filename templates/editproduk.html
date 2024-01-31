@@ -1,0 +1,63 @@
+{% extends 'base.html'%}
+{% block content %}
+<section>
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
+        <div class="container-fluid py-6">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mb-4 bg-white" style="margin-top: 50px;">
+                        <div class="card-header pb-0">
+                            <h6>Edit Produk</h6>
+                        </div>
+                        {%with messages = get_flashed_messages()%}
+                        {%if messages%}
+                        {% for message in messages %}
+                        <div class="alert alert-success alert-dismissable" role="alert">
+                            {{message}}<button type="button" class="btn-close float-end" data-dismiss="alert"
+                                aria-label="close">
+                            </button>
+                        </div>
+                        {%endfor%}
+                        {%endif%}
+                        {%endwith%}
+                        <div class="card-body px-0 pt-0 pb-2">
+                            <div class="table-responsive p-0">
+                                <form action="/editproduk/{{ data_produk.id }}" method="POST"
+                                    enctype="multipart/form-data">
+                                    <div class="form-group">
+                                        <label for="judul">nama produk</label>
+                                        <input type="text" name="nama_produk" class="form-control" id="nama_produk"
+                                            value="{{ data_produk.nama_produk }}" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Gambar Produk</label>
+                                        <input name="gambar_produk" type="file" accept="image/*" class="form-control"
+                                            id="gambar_produk" placeholder="Masukkan gambar produk artikel">
+                                        {% if data_produk.gambar_produk %}
+                                        <img src="{{ url_for('static', filename=data_produk.gambar_produk.replace('\\', '/')) }}"
+                                            alt="Current Image" class="img-fluid"
+                                            style="max-width: 200px; margin-top: 10px;">
+                                        {% endif %}
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="link_video">Link video tutorial</label>
+                                        <input type="text" name="link_video" class="form-control" id="link_video"
+                                            value="{{ data_produk.link_video }}" required>
+                                    </div>
+                                    <div style="margin-top: 10px;">
+                                        <button type="submit" class="btn btn-primary">Simpan
+                                            Perubahan</button>
+                                        <a href="/dataproduk"><button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Batal</button><a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</section>
+{% endblock %}
