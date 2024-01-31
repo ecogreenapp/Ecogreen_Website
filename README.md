@@ -22,7 +22,7 @@ Fitur utama termasuk:
 3. **Lingkungan Virtual (Opsional, tapi Direkomendasikan):**
     python -m venv venv
     source venv/bin/activate  # untuk Linux/Mac
-    # atau
+    atau
     .\venv\Scripts\activate  # untuk Windows
 
 4. **Install Dependensi:**
