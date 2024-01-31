@@ -20,10 +20,10 @@ Fitur utama termasuk:
     cd nama-proyek
 
 3. **Lingkungan Virtual (Opsional, tapi Direkomendasikan):**
-    python -m venv venv
-    source venv/bin/activate  # untuk Linux/Mac
-    atau
-    .\venv\Scripts\activate  # untuk Windows
+    python -m venv venv <br>
+    source venv/bin/activate  # untuk Linux/Mac <br>
+    atau <br>
+    .\venv\Scripts\activate  # untuk Windows <br>
 
 4. **Install Dependensi:**
     pip install -r requirements.txt
